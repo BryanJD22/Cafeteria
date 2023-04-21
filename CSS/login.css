@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins");
 
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,500;0,600;1,400&display=swap');
 * {
   box-sizing: border-box;
 }
@@ -20,22 +20,23 @@ h1 {
   letter-spacing: -1.5px;
   margin: 0;
   margin-bottom: 15px;
+  text-shadow:10px 4px 10px grey;
 }
 
 h1.title {
   font-size: 45px;
   line-height: 45px;
   margin: 0;
-  text-shadow: 0 0 10px rgba(16, 64, 74, 0.5);
+  text-shadow: 10px 10px 10px black;
 }
 
 p {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 100;
   line-height: 20px;
   letter-spacing: 0.5px;
   margin: 20px 0 30px;
-  text-shadow: 0 0 10px rgba(16, 64, 74, 0.5);
+  color: black;
 }
 
 span {
@@ -114,32 +115,32 @@ button.ghost {
   color: #fff;
 }
 
-button.ghost i{
+button.ghost i {
   position: absolute;
   opacity: 0;
   transition: 0.3s ease-in-out;
 }
 
-button.ghost i.register{
+button.ghost i.register {
   right: 70px;
 }
 
-button.ghost i.login{
+button.ghost i.login {
   left: 70px;
 }
 
-button.ghost:hover i.register{
+button.ghost:hover i.register {
   right: 40px;
   opacity: 1;
 }
 
-button.ghost:hover i.login{
+button.ghost:hover i.login {
   left: 40px;
   opacity: 1;
 }
 
 form {
-  background-color: #fff;
+  background-color: #e5d2c4;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -230,7 +231,6 @@ input {
 }
 
 .overlay {
-  background-image: url('image/image.gif');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;
@@ -250,11 +250,16 @@ input {
   right: 0;
   top: 0;
   bottom: 0;
-  background: linear-gradient(
+  background-image: url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cafe-1599479980.jpg?resize=640:*);
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: blur(2px);
+  
+  /* background: linear-gradient(
     to top,
     rgba(46, 94, 109, 0.4) 40%,
     rgba(46, 94, 109, 0)
-  );
+  ); */
 }
 
 .container.right-panel-active .overlay {
@@ -312,4 +317,3 @@ input {
 .social-container a:hover {
   border: 1px solid #4bb6b7;
 }
-
