@@ -36,9 +36,7 @@ p {
   line-height: 20px;
   letter-spacing: 0.5px;
   margin: 20px 0 30px;
-  color: white;
-  text-shadow: 10px 5px 10px black;
-
+  color: black;
 }
 
 span {
@@ -87,9 +85,9 @@ a:hover {
 button {
   position: relative;
   border-radius: 20px;
-  border: 1px solid grey;
-  background-color: gainsboro;
-  color: black;
+  border: 1px solid #4bb6b7;
+  background-color: #4bb6b7;
+  color: #fff;
   font-size: 15px;
   font-weight: 700;
   margin: 10px;
@@ -112,7 +110,7 @@ button:focus {
 }
 
 button.ghost {
-  background-color: burlywood;
+  background-color: rgba(225, 225, 225, 0.2);
   border: 2px solid #fff;
   color: #fff;
 }
@@ -305,7 +303,7 @@ input {
 }
 
 .social-container a {
-  border: 1px solid grey;
+  border: 1px solid #dddddd;
   border-radius: 50%;
   display: inline-flex;
   justify-content: center;
@@ -317,5 +315,5 @@ input {
 }
 
 .social-container a:hover {
-  border: 1px inset black;
+  border: 1px solid #4bb6b7;
 }
