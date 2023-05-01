@@ -139,10 +139,31 @@
 }
 
 /*MENU CONTENT*/
+a{
+    text-decoration: none;
+    color: #38220F;
+}
+.menucontent{
+    text-align: center;
+    font-size: 30px;
+    display: flex;
+    
+}
 .menucontent_list{
+    text-align: left;
     display: flex;
     flex-direction: column;
+    font-size: 40px;
+    margin-top: 55px;
+    
+    
 }
 .icon{
-    width: 30px;
+    width: 35px;
+    margin-right: 20px;
+    
+}
+.menucontent_icon{
+    margin: 15px;
+
 }
