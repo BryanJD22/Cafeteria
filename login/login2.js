@@ -53,7 +53,12 @@ function getUserInfo() {
   });
 }
 
-// Añadir el evento de clic al botón de inicio de sesión de Facebook
-document.getElementById("fbLoginBtn").addEventListener("click", function () {
+// Añadir el evento de clic al botón de registro
+document.getElementById("facebook_register").addEventListener("click", function () {
+  FB.login(checkLoginState, { scope: "public_profile,email" });
+});
+
+// Añadir el evento click al boton de inicio de sesión
+document.getElementById("facebook_login").addEventListener("click", function () {
   FB.login(checkLoginState, { scope: "public_profile,email" });
 });
