@@ -262,6 +262,12 @@ a{
     display: flex;
     align-items: center;
 }
+.rrss--insta{
+    width:22px;
+}
+.rrss--tiktok{
+    width: 22px;
+}
 .rrss svg {
     transition: all .3s cubic-bezier(.215,.61,.355,1)
 }
@@ -313,7 +319,7 @@ a{
     fill: #ffffff85;
     width: 20px;
 }
-
+/**/
 .introhome {
     height: 80vh;
     min-height: 700px;
@@ -394,7 +400,7 @@ a{
 
 /* Carrusel*/
 .titlecarousel{
-    font-size: 23px;
+    font-size: 30px;
     padding-bottom: 35px;
 }
 /* Animation */
@@ -402,6 +408,8 @@ a{
 	0% { transform: translateX(0); }
 	100% { transform: translateX(calc(-250px * 7))}
 }
+
+
 #products{
     width: 100%;
 }
@@ -414,21 +422,63 @@ a{
     flex-direction: column;
     padding-top: 150px;
 }
+
 .slider{
-    
+    background: white;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+
 }
+.slider::before,
+.slider::after{
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+
+}
+
+.slider::after{
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+.slider::before {
+    left: 0;
+    top: 0;
+}
+
 .slide{
-    background-color: aqua;
-    width: 100px;
-    height: 125px;
-    padding-left: 10px;
+    height: 100px;
+    width: 250px;
+}
+.slide img{
+    height: 100%;
+    width: 100%;
+    display: block;
 }
 .slice-track{
-    background-color: #ddbe9b;
     display: flex;
     justify-content: space-between;
     height: 300px;
     padding-top: 10px;
     padding-left: 35px;
     padding-right: 35px;
+    align-items: center;
+    animation: scroll 40s linear infinite;
+	display: flex;
+    width: calc(250px*14);
+
+}
+/* Nosotros*/
+
+.nosotros{
+    background-color: #2566dd;
+    width: 100%;
+    height: 400px;
 }
