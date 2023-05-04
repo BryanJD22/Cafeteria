@@ -85,8 +85,8 @@ a:hover {
 button {
   position: relative;
   border-radius: 20px;
-  border: 1px solid #4bb6b7;
-  background-color: #4bb6b7;
+  border: 1px solid black;
+  background-color: #967259;
   color: #fff;
   font-size: 15px;
   font-weight: 700;
@@ -140,7 +140,7 @@ button.ghost:hover i.login {
 }
 
 form {
-  background-color: #e5d2c4;
+  background-color: #967259;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -317,3 +317,4 @@ input {
 .social-container a:hover {
   border: 1px solid #4bb6b7;
 }
+
