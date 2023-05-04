@@ -230,10 +230,12 @@ a{
 .contact__link {
     font-size: 30px;
     display: flex;
+    
 }
 
 .contact__link .textmenu {
     position: relative;
+    margin-left: 15px;
 }
 
 .contact__link .textmenu:after {
@@ -266,8 +268,9 @@ a{
     width:22px;
 }
 .rrss--tiktok{
-    width: 22px;
+    width: 20px;
 }
+
 .rrss svg {
     transition: all .3s cubic-bezier(.215,.61,.355,1)
 }
@@ -322,7 +325,7 @@ a{
 /**/
 .introhome {
     height: 80vh;
-    min-height: 700px;
+    min-height: 850px;
     position: relative;
     z-index: 0;
     display: flex;
@@ -401,7 +404,7 @@ a{
 /* Carrusel*/
 .titlecarousel{
     font-size: 30px;
-    padding-bottom: 35px;
+    padding-bottom: 150px;
 }
 /* Animation */
 @keyframes scroll {
@@ -415,12 +418,11 @@ a{
 }
 .carousel-container{
     width: 100%;
-    height: 300px;
+    height: 750px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding-top: 150px;
 }
 
 .slider{
@@ -480,5 +482,24 @@ a{
 .nosotros{
     background-color: #2566dd;
     width: 100%;
-    height: 400px;
+    height: 1000px;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+.cafeteria-fisica{
+    background-color: brown;
+    height: 650px;
+    width :500px;
+    margin-left: 100px;
+}
+
+.descripcion-cafeteria{
+    font-size: 48px;
+}
+
+
+
+
+
