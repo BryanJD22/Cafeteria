@@ -11,7 +11,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
   <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
@@ -105,9 +107,9 @@
   </section>
 
 <!-- Carousel--> 
-  <div class="carousel-container">
-    <p class="titlecarousel">TODOS LOS TIPOS DE CAFE Y TÉ A TU ALCANCE</p>
-    <div id="products">
+  <div class="carousel-container" >
+    <p class="titlecarousel" data-aos="fade-down" data-aos-duration="2990">TODOS LOS TIPOS DE CAFE Y TÉ A TU ALCANCE</p>
+    <div id="products" data-aos="fade-down" data-aos-duration="3000">
       <div class="slider">
         <div class="slice-track">
           <div class="slide">
@@ -159,13 +161,13 @@
   </div>
 
 
-  <div class="nosotros  aos-init aos-animate" data-aos="fade-up" data-aos-offset="100" data-aos-delay="100" data-aos-duration="1000">
-      <div class="img_nosotros">
+  <div class="nosotros" >
+      <div class="img_nosotros" data-aos="fade-down" data-aos-duration="3000">
           <img src="img/fd0ebdf818eb5ed7d34cb807e78b3102 2 (1).png" alt="">
       </div>
       <div class="tarjeta-puntos"></div>
-      <div class="cafeteria-fisica">
-        <div class="club">
+      <div class="cafeteria-fisica" data-aos="fade-down"  data-aos-duration="3000">
+        <div class="club" data-aos="fade-up">
           <p class="tag">Programa de fidelidad</p>
           <p class="title">CLUB CAFTÉ</p>
           <p class="text">Registrate ,acumula puntos y disfrutalos en tus siguientes compras</p>
@@ -181,21 +183,54 @@
 
 
   <div class="info">
-
+    <div class="info_izq">
+      <h1>Mucho MÁS que café</h1>
+      <h2>Innovación, adaptación y mejora continua</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum at nulla a facilisis. Donec interdum auctor leo nec mattis. Curabitur condimentum libero sed suscipit viverra. Integer non nibh quis sem aliquet venenatis at a nibh. Mauris eget molestie mauris. Donec ut iaculis tellus, ac lacinia eros. Quisque nec felis porta, porta ex vel, malesuada enim. Vestibulum pharetra nunc ipsum, non ornare mi vestibulum id. Vivamus pulvinar cursus nisi nec bibendum.</p>
+    </div>
+    <div class="info_derecha">
+        <div class="mini_info">
+          <h1>50</h1>
+          <h2>años de experiencia</h2>
+          <p>cumpliendo con las necesidades de nuestros clientes</p>
+        </div>
+        <div class="mini_info">
+          <h1>50</h1>
+          <h2>años de experiencia</h2>
+          <p>cumpliendo con las necesidades de nuestros clientes</p>  
+        </div>
+        <div class="mini_info">
+          <h1>50</h1>
+          <h2>años de experiencia</h2>
+          <p>cumpliendo con las necesidades de nuestros clientes</p>
+        </div>
+        <div class="mini_info">
+          <h1>50</h1>
+          <h2>años de experiencia</h2>
+          <p>cumpliendo con las necesidades de nuestros clientes</p>
+        </div>
+    </div>
   </div>
 
   <div class="gallery">
+    <h1 class="galley_title"></h1>
+    <div class="gallery_photos">
 
+    </div>
   </div>
 
-  <div class="contacto"></div>
+  <div class="contacto">
+    
+  </div>
 
   <footer class="footer">
-    
-  </footer>
 
+  </footer>
 
   <script src='JS/index.js'></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
