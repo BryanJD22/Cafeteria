@@ -760,5 +760,6 @@ a{
     justify-content: space-between;
     flex-direction: row;
     align-items: flex-end;
-    margin: 0 110px 113px 0px;    
+    margin: 0 110px 113px 0px;
+    text-decoration: underline;
 }
