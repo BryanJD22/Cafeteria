@@ -14,10 +14,10 @@ public class MotorSQL {
 
     //private static final String URL = "jdbc:mysql://localhost/rakutentv";
     //jdbc:derby://localhost:1527/netflix
-    private static final String URL = "jdbc:derby://localhost:1527/netflix";
+    private static final String URL = "jdbc:derby://localhost:1527/CAFTÉ";
     private static final String CONTROLADOR = "com.mysql.jdbc.Driver";
-    private static final String USER = "alberto";
-    private static final String PASS = "1234";
+    private static final String USER = "alex";
+    private static final String PASS = "alex";
 
     public void connect() {
         try {
