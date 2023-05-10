@@ -3,12 +3,12 @@ package model;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
-public class UserDAO implements DAO<Usuario, Integer> {
+public class UserDAO implements DAO<User, Integer> {
 
-    private static final String SQL_INSERT = "INSERT INTO `usuario`(`EMAIL`, `PASS`) VALUES";
-    private static final String SQL_UPDATE = "UPDATE `usuario` SET ";
-    private static final String SQL_DELETE = " DELETE FROM `usuario` WHERE ";
-    private static final String SQL_FIND_ALL = "SELECT  *  FROM usuario WHERE 1=1 ";
+    private static final String SQL_INSERT = "INSERT INTO `USR`(`EMAIL`, `PASS`) VALUES";
+    private static final String SQL_UPDATE = "UPDATE `USR` SET ";
+    private static final String SQL_DELETE = " DELETE FROM `USR` WHERE ";
+    private static final String SQL_FIND_ALL = "SELECT  *  FROM USR WHERE 1=1 ";
 
     private MotorSQL motorSql;
 
@@ -17,7 +17,7 @@ public class UserDAO implements DAO<Usuario, Integer> {
     }
 
     @Override
-    public int add(Usuario entidad) {
+    public int add(User entidad) {
         this.motorSql.connect();
         String sql = SQL_INSERT
                 + "('" + entidad.getEmail() + " ' , "
@@ -39,7 +39,7 @@ public class UserDAO implements DAO<Usuario, Integer> {
     }
 
     @Override
-    public int update(Usuario bean) {
+    public int update(User bean) {
         this.motorSql.connect();
         String sql = SQL_UPDATE;
         if (bean.getEmail() != null) {
@@ -58,8 +58,8 @@ public class UserDAO implements DAO<Usuario, Integer> {
     }
 
     @Override
-    public ArrayList<Usuario> findAll(Usuario bean) {
-        ArrayList<Usuario> lstUsuarios = new ArrayList<>();
+    public ArrayList<User> findAll(User bean) {
+        ArrayList<User> lstUsuarios = new ArrayList<>();
         try {
             this.motorSql.connect();
             String sqlCabecera = SQL_FIND_ALL;
@@ -82,7 +82,7 @@ public class UserDAO implements DAO<Usuario, Integer> {
 
             rs.beforeFirst();
             while (rs.next()) {
-                Usuario usuario = new Usuario();
+                User usuario = new User();
                 usuario.setId(rs.getInt(1));
                 usuario.setEmail(rs.getString(2));
                 usuario.setPassword(rs.getString(3));
