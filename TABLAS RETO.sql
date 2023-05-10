@@ -34,3 +34,15 @@ CREATE TABLE PRODUCT (
   ID_PRODUCT_LINE INT NOT NULL,
   CONSTRAINT FK_ID_PRODUCT FOREIGN KEY (ID_PRODUCT_LINE) REFERENCES PRODUCT_LINE(ID_PRODUCT_LINE)
 );
+
+INSERT VALUES INTO PRODUCT (NAME, DESCRIPTION, PRICE) VALUES ("Capuccino", "The perfect balance of espresso, steamed milk and foam it has a strong coffee flavor mixed with the sweetness of the milk", 0.75)
+INSERT VALUES INTO PRODUCT (NAME, DESCRIPTION, PRICE) VALUES("Lungo","A longer espresso with more water, resulting in a milder taste and a larger serving size",0.40)
+INSERT VALUES INTO PRODUCT (NAME, DESCRIPTION, PRICE) VALUES("Ristretto","A concentrated espresso shot with less water, resulting in a stronger, more intense flavor",0.60)
+INSERT VALUES INTO PRODUCT (NAME, DESCRIPTION, PRICE) VALUES("Latte","A milk-based coffee made with espresso and steamed milk, topped with a small layer of frothed milk",0.50)
+INSERT VALUES INTO PRODUCT (NAME, DESCRIPTION, PRICE) VALUES("Organic","A coffee made with organically grown beans, without the use of synthetic pesticides or fertilizers",0.55)
+INSERT VALUES INTO PRODUCT (NAME, DESCRIPTION, PRICE) VALUES("Decaf","A type of coffee made with decaffeinated beans, providing a similar taste to regular coffee but without the caffeine.",0.45)
+INSERT VALUES INTO PRODUCT (NAME, DESCRIPTION, PRICE) VALUES("Ristretto","A concentrated espresso shot with less water, resulting in a stronger, more intense flavor",0.45)
+
+
+
+
