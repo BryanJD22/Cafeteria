@@ -618,6 +618,14 @@ a{
     align-items: flex-start;
     padding: 200px;
 }
+.info_izq h2{
+    color: #805630;
+    margin: 15px 0px 20px 0px;
+    font-size: 16px;
+}
+.info_izq h1{
+    font-size: 35px;
+}
 
 .info_derecha{
     display: flex;
