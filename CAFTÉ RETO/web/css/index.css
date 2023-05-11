@@ -240,13 +240,17 @@ a{
     align-items: center;
     justify-content: space-between;
     margin: auto 0 0;
+    align-content: center;
 }
 
 .contact__link {
     font-size: 30px;
     display: flex;
+    align-items: center;
     
 }
+
+
 
 .contact__link .textmenu {
     position: relative;
@@ -474,7 +478,6 @@ a{
     margin: auto;
     overflow: hidden;
     position: relative;
-
 }
 .slider::before,
 .slider::after{
@@ -500,12 +503,16 @@ a{
 
 .slide{
     height: 100px;
-    width: 250px;
+    width: 100px;
 }
 .slide img{
     height: 100%;
     width: 100%;
     display: block;
+}
+.slide h3{
+  text-align: center;
+  
 }
 .slice-track{
     display: flex;
@@ -515,7 +522,7 @@ a{
     padding-left: 35px;
     padding-right: 35px;
     align-items: center;
-    animation: scroll 40s linear infinite;
+    animation: scroll 40s linear infinite both;
 	display: flex;
     width: calc(250px*14);
 
@@ -556,7 +563,8 @@ a{
     justify-content: center;
     position: relative;
     position: absolute;
-    top: -80px;
+    top: -235px;
+    padding: 130px;
 }
 
 .club::after {
@@ -577,11 +585,16 @@ a{
 .club .title {
     font-size: 28px;
     z-index: 1;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #805630;
+
 }
 
 .club .text{
     font-size: 14px;
     z-index: 1;
+    text-align: center;
 }
 
 .cafeteria-fisica{
@@ -595,8 +608,13 @@ a{
     font-size: 50px;
     margin-bottom: 20px;
 }
+.descripcion-cafeteria h2{
+    color: #805630;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
 .descripcion-cafeteria p{
-    font-size: 16px;
+    font-size: 18px;
     margin-top: 15px;
     
 }
