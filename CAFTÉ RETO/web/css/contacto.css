@@ -3,7 +3,7 @@
 }
 
 body {
-    background: #ffffff;
+    background-color: #805630;
     color: #fff;
     line-height: 1.6;
     font-family: 'Quicksand', sans-serif;
@@ -41,7 +41,8 @@ ul {
 }
 
 .contact-form {
-    background: #967259;
+    background-color: #E0BC75;  
+    color: #000;
 }
 
 .contact-form form {
@@ -70,20 +71,20 @@ ul {
     border: none;
     background: none;
     outline: 0;
-    color: #fff;
-    border-bottom: 1px solid #ec791a;
+    border-bottom: 1px solid #000000;
 }
 
 .contact-form form button {
-    background: #ec791a;
+    background: #000000;
     border: 0;
     text-transform: uppercase;
     padding: 1em;
+    color: white;
 }
 
 .contact-form form button:hover,
 .contact-form form button:focus {
-    background: #ec791a;
+    background: #000000;
     color: #fff;
     transition: background-color 1s ease-out;
     outline: 0;
@@ -91,8 +92,8 @@ ul {
 
 /* CONTACT INFO */
 .contact-info {
-    background: rgb(163, 110, 66);
-    color: wheat;
+    background-color: white;
+    color: black;
 }
 
 .contact-info h4, .contact-info ul, .contact-info p {

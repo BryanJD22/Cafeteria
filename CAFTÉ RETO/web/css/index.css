@@ -522,7 +522,7 @@ a{
     padding-left: 35px;
     padding-right: 35px;
     align-items: center;
-    animation: scroll 40s linear infinite both;
+    animation: scroll 50s linear infinite;
 	display: flex;
     width: calc(250px*14);
 

@@ -1,18 +1,23 @@
 
-function sendEmail(){
-    Email.send({
-        Host : "smtp.elasticemail.com",
-        Username : "bryandavila520@gmail.com",
-        Password : "07A3A232565B480C13E0A72FADA22DF01E83",
-        To : 'a26959@svalero.com',
-        From : document.getElementById("email").value,
-        Subject : "New contact form enquiry",
-        Body : "Name: " + document.getElementById("name").value
-            +"<br> Email: " + document.getElementById("email").value
-            +"<br> Phone: " + document.getElementById("phone").value
-            +"<br> Message: " + document.getElementById("message").value
+// Configuración de EmailJS
+emailjs.init("CorKeuwTYmBprATvu");
 
-    }).then(
-      message => alert("Message Sent Succesfully")
-    );
-}
+// Manejador de envío del formulario
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+  event.preventDefault(); // Evitar que el formulario se envíe por defecto
+
+  // Enviar el correo electrónico
+  emailjs.send("service_4bkfpvf","bj20223014",{
+    to_name: document.getElementById("name").value,
+    from_name: document.getElementById("email").value,
+    subject: "Nuevo mensaje de " + document.getElementById("name").value,
+    message_html: document.getElementById("message").value}
+    )
+    .then(function(response) {
+      console.log("Correo electrónico enviado correctamente", response);
+      alert("Correo electrónico enviado correctamente");
+    }, function(error) {
+      console.log("Error al enviar el correo electrónico", error);
+      alert("Error al enviar el correo electrónico");
+    });
+});
