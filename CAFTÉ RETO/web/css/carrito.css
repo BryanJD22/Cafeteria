@@ -231,9 +231,6 @@ body {
     background-color: var(--marron);
 }
 
-button:hover {
-    opacity: 0.9;
-}
 
 #open_cart_btn {
     position: absolute;
@@ -249,7 +246,6 @@ button:hover {
     color: #38220F;
     background-color: transparent;
 }
-
 
 /*TODOS LOS TIPOS DE CAFE PARA AÑADIR*/
 .items {
@@ -296,6 +292,37 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
+}
+
+.filter-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    top: 11%;
+    width: 100%;
+    height: 3%;
+}
+.filters{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8%;
+    height: 100%;
+    background-color: var(--marron);
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.filters:hover{
+    background-color: white;
+    border:1px solid #38220F;
+    font-weight: bold;
+    color: var(--marron);
+    transform: scale(1.1);
+    transition: 0.5s;
 }
 
 .search-box {
