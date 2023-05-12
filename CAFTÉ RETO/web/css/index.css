@@ -618,6 +618,10 @@ a{
     margin-top: 15px;
     
 }
+.bottom-cafeteria a{
+    width: 100px;
+    height: 100px;
+}
 
 /*Info*/
 
@@ -778,12 +782,16 @@ a{
     font-size: 40px;
     max-width: 700px;
     margin: 0 0 25px;
+    
+
+    
 }
 .contacto .contacto_content .texto_contacto{
     color: white;
     font-size: 20px;
     max-width: 700px;
     margin: 0 0 40px;
+    
 }
 
 .contacto .contacto_content .contacto_boton{
@@ -792,6 +800,7 @@ a{
     font-size: 25px;
     padding: 20px 35px 20px;
     border: 1px solid white;
+
 }
 /*Footer*/
 
