@@ -658,6 +658,10 @@ a{
     display: flex;
     flex-direction: column;
 }
+.mini_info h2{
+    color: #805630;
+}
+
 
 .mini_info p{
    width: 125px;
