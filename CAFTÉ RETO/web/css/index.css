@@ -299,7 +299,7 @@ a{
     transition: all .3s cubic-bezier(.215,.61,.355,1)
 }
 
-.search {
+/*.search {
     position: relative;
     display: flex;
     align-items: center;
@@ -340,7 +340,7 @@ a{
 .search .lupa svg {
     fill: #ffffff85;
     width: 20px;
-}
+}*/
 /*Intro*/
 .introhome {
     height: 80vh;
