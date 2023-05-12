@@ -27,10 +27,9 @@
 
 .container {
     width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-    padding-left: 50px;
-    padding-right: 50px;
+    margin: auto;
+    margin-bottom: 100px;
+
 }
 
 .legal-content .content {
@@ -42,7 +41,7 @@
     padding: 0 0 30px;
     font-weight: 300;
     text-transform: uppercase;
-    color: #2566dd;
+    color: #E0BC75;
 }
 
 .legal-content .content p {
@@ -54,6 +53,7 @@
 
 .legal-content .content-contact {
     margin: 5px 0 !important;
+    
 }
 
 .legal-content .content h2, .legal .content .h2 {
@@ -64,6 +64,7 @@
     text-transform: initial;
     letter-spacing: 0;
     margin: 40px 0 10px;
+    color: #E0BC75;
 }
 
 
