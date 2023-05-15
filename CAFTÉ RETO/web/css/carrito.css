@@ -296,12 +296,13 @@ body {
 header {
     background: white;
     box-shadow: 10px 0px 10px rgba(0, 0, 0, 0.479);
-    height: 25%;
+    height: 300px;
     display: flex;
     position: relative;
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
+    z-index: -1;
 }
 
 .filter-container {
