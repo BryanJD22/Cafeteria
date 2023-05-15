@@ -233,12 +233,19 @@ body {
     height: 15%;
 }
 
+.btn-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 40%;
+    width: 100%;
+}
 .riesgos-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 200px;
-    height: 50px;
+    width: 40%;
+    height: 100%;
     border-radius: 20px;
     background-color: rgb(0, 0, 0);
     color: white;
@@ -264,4 +271,8 @@ body {
     background-color: rgb(255, 255, 255);
     transition: 0.2s;
     color: black;
+}
+
+.content h2{
+    font-size: 20px;
 }

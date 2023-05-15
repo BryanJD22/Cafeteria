@@ -96,7 +96,7 @@ body {
     width: 100%;
     height: 25%;
     display: flex;
-    gap: 100px;
+    gap: 50px;
     margin-top: 20px;
 }
 .content {
@@ -117,13 +117,13 @@ body {
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 50%;
+    width: 30%;
 }
 .personal{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 18%;
+    width: 20%;
     height: 100%;
     border-radius: 10px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.308);
@@ -138,12 +138,7 @@ body {
     border-top-right-radius: 10px;
 
 }
-.img-personal_Alejandro{
-    flex-direction: column;
-    box-sizing: border-box;
-    width: 70%;
-    height: 80%;
-}
+
 
 .personal-info{
     display: flex;
@@ -155,6 +150,13 @@ body {
     padding: 5px;
     font-size: 15px;
 }
+.personal-info h4{
+    font-size: 12px;
+}
+
+.personal-info p{
+    font-size: 10px;
+}
 
 .convenio{
     display: flex;
@@ -165,7 +167,8 @@ body {
 .legislacion{
     margin-top: 40px;
     width: 100%;
-    height: 50%;
+    height: 40%;
+    font-size: 12px;
 }
 
 
@@ -190,6 +193,7 @@ body {
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.466);
     background-color: rgb(255, 255, 255);
     box-sizing: border-box;
+    background-color: black;
 }
 
 
@@ -202,77 +206,76 @@ body {
     box-sizing: border-box;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-}
-
-.huelga-title-2{
-    gap: 20px;
-    margin: 20px;
-}
-
-
-.huelga-img{
-    width: 80%;
-    height: 40%;
-    border-radius: 5px;
-}
-
-.vid-gallery{
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    padding-bottom: 20px;
-}
-
-.video{
-    height: 200px;
-    width: 30%;
-    border: 1px solid white;
-    cursor: pointer;
-    overflow: hidden;
-    border-radius: 5px;
-    margin: auto;
-}
-
-.video video{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    transition: .5s;
-}
-
-.video video:hover{
-    transform: scale(1.1);    
-}
-
-.popup-video{
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    background-color: rgb(0, 0, 0, 0.8);
-    height: 100%;
-    width: 100%;
-    display: none;
-}
-
-.popup-video video{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    height: auto;
-    width: auto;
-    border: 1px solid white;
-    object-fit: cover;
-}
-
-.popup-video span{
-    position: absolute;
-    top: 5px;
-    right: 20px;
-    font-size: 50px;
     color: white;
+}
+
+.videos-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    width: 80%;
+    height: 80%;
+}
+
+.content3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 30%;
+   
+}
+
+.sindicato-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 80%;
+    width: 80%;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.466);
+}
+.sindicato-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15%;
+
+}
+.sindicato-img{
+    width: 80%;
+    height: 30%;
+}
+
+.sindicato-web{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 5%;
+    background-color: red;
+    text-decoration: none;
+    color: white;
+    border-radius: 20px;
     font-weight: bold;
-    z-index: 100;
-    cursor: pointer;
+    border: 2px solid black;
+    transition: 0.5s;
+}
+
+.sindicato-web:hover{
+    transition: 0.5s;
+    background-color: black;
+    font-weight: bolder;
+    transform: scale(1.1);
+    border: 2px solid red;
+}
+
+.sindicato-info{
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.sindicato-info p{
+    font-size: 14px;
 }

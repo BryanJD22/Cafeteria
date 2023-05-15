@@ -913,7 +913,7 @@ transition: all 0.3s ease-in;
 .links_footer{
     height: 100px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     flex-direction: row;
     align-items: flex-end;
     margin: 0 110px 113px 0px;

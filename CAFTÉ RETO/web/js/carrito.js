@@ -3,7 +3,7 @@ const ITEMS = [
         id: 1,
         name: 'Capuccino',
         price: 2.5,
-        image: 'img/cafecitotipo1.jpg',
+        image: 'img/',
         qty: 1
     },
     {
