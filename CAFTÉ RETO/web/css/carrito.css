@@ -12,6 +12,7 @@
 }
 
 
+
 :root {
     --marron: #38220f;
     --gris-clarito: rgba(0, 0, 0, 0.1);
@@ -37,6 +38,7 @@ body {
     transform: translateX(110%);
     z-index: 2;
     transition: transform .5s ease-in-out;
+
 }
 
 .sidecart.open {
@@ -251,6 +253,8 @@ body {
 #open_cart_btn:hover {
     transition: 0.2s;
     transform: scale(1.1);
+    margin-right: 60px;
+    height: 55px;
 }
 
 /*TODOS LOS TIPOS DE CAFE PARA AÑADIR*/
@@ -339,6 +343,8 @@ header {
     justify-content: center;
     border-radius: 50px;
     border: black 1px solid;
+
+
 }
 
 .search-box input[type="text"] {

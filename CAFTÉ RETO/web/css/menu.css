@@ -1,4 +1,5 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@500&family=Bitter&display=swap');
+ 
 *{
     font-family: 'Bitter', serif;
 
@@ -21,7 +22,7 @@ body {
   }
   
   .established {
-    font-style: italic;
+    font-style: 'Bitter', serif;
   }
   
   h1, h2, p {
@@ -30,7 +31,7 @@ body {
   
   .menu {
     width: 80%;
-    background-color: burlywood;
+    background-color: white;
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
@@ -41,12 +42,14 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 20%;
   }
   
   hr {
     height: 2px;
-    background-color: brown;
-    border-color: brown;
+    background-color: #E0BC75;  
+
+    border-color: #E0BC75;
   }
   
   .bottom-line {
@@ -54,7 +57,8 @@ body {
   }
   
   h1, h2 {
-    font-family: Impact, serif;
+    font-family: 'Bitter', serif;
+
   }
   
   .item p {
