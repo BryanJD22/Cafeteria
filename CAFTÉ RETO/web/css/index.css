@@ -440,7 +440,7 @@ a{
     align-items: flex-start;
 }
 
-.popuptienda p{
+.popuptienda p {
     width: 450px;
     display: flex;
     color: black;
@@ -517,7 +517,7 @@ a{
 .slice-track{
     display: flex;
     justify-content: space-between;
-    height: 300px;
+    height: 200px;
     padding-top: 10px;
     padding-left: 35px;
     padding-right: 35px;
@@ -532,26 +532,37 @@ a{
 .nosotros{
     position: relative;
     width: 100%;
-    height: 660px;
     margin-top: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .nosotros::after {
     content: '';
     width: 100%;
-    height: 120%;
+    height: 100%;
     background-color: #FFE3CF;
     position: absolute;
-    top: 0;
+    top: 90px;
     left: 0;
     z-index: -1;
 }
 
 .img_nosotros{
+    margin-right: 85px;
+}
 
+.img_nosotros img{
+    width: 80%;
+
+}
+
+.container_nosotros {
+    max-width: 1640px;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 0 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .club {
@@ -564,7 +575,8 @@ a{
     position: relative;
     position: absolute;
     top: -235px;
-    padding: 130px;
+    max-width: 200px;
+    text-align: center;
 }
 
 .club::after {
@@ -600,13 +612,18 @@ a{
 .cafeteria-fisica{
     height: 350px;
     width :500px;
-    margin-left: 290px;
+    margin-left: 90px;
     padding: 120px 0 0 0;
 }
 
 .descripcion-cafeteria h1{
     font-size: 50px;
     margin-bottom: 20px;
+}
+@media (max-width: 1380px) {
+    .descripcion-cafeteria h1{
+        font-size: 40px;
+    }
 }
 .descripcion-cafeteria h2{
     color: #805630;
@@ -618,10 +635,18 @@ a{
     margin-top: 15px;
     
 }
-.bottom-cafeteria a{
-    width: 100px;
-    height: 100px;
+.bottom-cafeteria {
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    margin-top: 50px;
 }
+.bottom-cafeteria a{
+    color: rgb(255, 255, 255);
+    border: 2px black solid;
+    padding: 10px;
+}
+
 
 /*Info*/
 
@@ -630,7 +655,8 @@ a{
     width: 100%;
     align-items: center;
     justify-content: center;
-    margin-top: 175px;
+    margin-top: 150px;
+    margin-bottom: 100px;
 }
 
 .info_izq{
@@ -638,8 +664,16 @@ a{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 200px;
+    padding: 200px 100px;
 }
+
+
+@media (max-width: 1280px) {
+    .info_izq{
+        padding: 200px 60px;
+    }
+}
+
 .info_izq h2{
     color: #805630;
     margin: 15px 0px 20px 0px;
@@ -654,14 +688,28 @@ a{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    width: 50%;
+    width: 60%;
+}
+
+@media (max-width: 1280px) {
+    .info_derecha{
+        width: 80%;
+    }
 }
 
 .mini_info{
-    padding: 65px;
+    padding: 45px;
     display: flex;
     flex-direction: column;
+    width: calc(100% / 2);
 }
+
+@media (max-width: 1280px) {
+    .mini_info{
+        padding: 35px;
+    }
+}
+
 .mini_info h2{
     color: #805630;
 }
@@ -675,6 +723,7 @@ a{
     display: flex;
     justify-content: space-between;
     margin: 10px;
+
     height: 110px;
     align-items: center;
     padding-top: 110px;
@@ -800,7 +849,14 @@ a{
     font-size: 25px;
     padding: 20px 35px 20px;
     border: 1px solid white;
+transition: all 0.3s ease-in;
 
+}
+
+.contacto .contacto_content .contacto_boton:hover{
+    background-color: white;
+    color: black; 
+    transition: all 0.3s ease-in;
 }
 /*Footer*/
 
