@@ -1,4 +1,5 @@
 const ITEMS = [
+    //Aqui hay que pasar la url de base de datos
     {
         id: 1,
         name: 'Capuccino',
@@ -93,9 +94,9 @@ const itemsNum = document.getElementById('items_num')
 const subtotalPrice = document.getElementById('subtotal_price')
 
 
-let cart_data = []
+let cart_data = [] //Creo que aqui hay que añadir la url de base de datos
 
-
+//Abrir y cerrar carrito
 openBtn.addEventListener('click', openCart)
 closeBtn.addEventListener('click', closeCart)
 
@@ -120,12 +121,12 @@ function closeCart() {
     }, 500)
 
 }
-
+//////////////////////////////////////////////////////////////
 
 
 function renderItems() {
-    ITEMS.forEach((item, idx) => {
-        const itemEl = document.createElement('div');
+    ITEMS.forEach((item/*Este es el item de la base de datos con su id, nombre etc*/, idx) => {
+        const itemEl = document.createElement('div');//no tiene s, no es items es item
         itemEl.classList.add('item');
         itemEl.id = `item-${item.id}`;
         itemEl.onclick = () => addItem(idx, item.id);
@@ -139,7 +140,7 @@ function renderItems() {
             <button id="addtocartproduct-${item.id}" class="addtocartproduct">Add to Cart</button>
         `;
         itemsEl.appendChild(itemEl);
-        
+        //Esto es para el popup de añadir el carrito 
         const addtocartproduct = document.getElementById(`addtocartproduct-${item.id}`);
 
         addtocartproduct.addEventListener('click', function() {
@@ -181,6 +182,8 @@ function addItem(idx, itemId) {
     updateCart()
 }
 
+
+//Esto es para que el carrito calcule, añada y elimine el objeto 
 function updateCart() {
     renderCartItems()
     calcItemsNum()
@@ -204,13 +207,14 @@ function decreaseQty(itemId){
     updateCart()
 }
 
-
+//Calcular el numero de productos añadidos
 function calcItemsNum(){
     let itemsCount = 0
     cart_data.forEach(item => itemsCount += item.qty)
     itemsNum.innerText = itemsCount
 }
-
+//////////////////////////////////////////////
+//Calcular el precio de productos añadidos
 function calcSubtotalPrice(){
     let subtotal = 0
     cart_data.forEach(item => (subtotal += item.price * item.qty))
