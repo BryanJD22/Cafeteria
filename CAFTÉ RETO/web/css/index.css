@@ -51,7 +51,14 @@
     display: flex;
     align-content: center;
     flex-wrap: nowrap;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
 }
+.cart:hover, .user:hover {
+    transform: scale(1.2);
+    transition: all 0.3s ease-in;
+}
+
 .header__content{
     position: absolute;
     right: 0px;
@@ -90,6 +97,7 @@
     padding: 0;
     z-index: 25;
     cursor: pointer;
+    transform: scale(1.5);
 }
 
 .menuburger__line {
@@ -205,7 +213,7 @@ a{
     display: flex;
     align-items: center;
     font-size: 30px;
-
+    cursor: pointer;
 }
 .menucontent_icon svg{
     width: 50px;
@@ -343,8 +351,8 @@ a{
 }*/
 /*Intro*/
 .introhome {
-    height: 80vh;
-    min-height: 850px;
+    height: 70vh;
+    min-height: 470px;
     position: relative;
     z-index: 0;
     display: flex;
@@ -358,7 +366,7 @@ a{
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.39);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .introhome .introhome__img {
@@ -387,9 +395,9 @@ a{
 
 .introhome .introhome__content .titleintro {
     color: white;
-    font-size: 40px;
-    max-width: 700px;
-    margin: 0 0 40px;
+    font-size: 32px;
+    max-width: 520px;
+    margin: 0 0 20px;;
 }
 
 .choice{
@@ -397,40 +405,40 @@ a{
     font-size: 40px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin-top: 100px;
+    justify-content: flex-start;
+    margin-top: 60px;
 }
 
 .choice_cafe{
     background-color: #38220E;
     color: white;
-    width: 225px;
-    height: 72px;
+    padding: 16px 48px;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    font-size: 16px;
+    margin: 0 40px 0 0;
+    border-radius: 5px;
+    transition: all 0.2s ease-in;
+    cursor: pointer;
 }
 
-.choice_te{
-    background-color: #38220E;
-    color: white;
-    width: 225px;
-    height: 72px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.choice_cafe:hover{
+    background-color: white;
+    color: #38220E;
+    transition: all 0.2s ease-in;
 }
+
 
 .popuptienda {
     position: absolute;
-    right: 50px;
-    bottom: -50px;
+    right: 30px;
+    bottom: -30px;
     background-color: #f7bc93;
-    padding: 30px;
-    min-width: 400px;
+    padding: 21px;
+    max-width: 430px;
     color: rgb(255, 255, 255);
-    min-height: 200px;
+    min-height: auto;
     box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
     /*animation-name: animationCard;
     animation-duration: 1.5s;*/
@@ -438,25 +446,36 @@ a{
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    border-radius: 5px;
 }
 
 .popuptienda p {
-    width: 450px;
     display: flex;
     color: black;
     margin-bottom: 40px;
-
+    font-family: 'Open Sans', sans-serif;
 }
-.popuptienda a{
+
+.popuptienda a {
     color: rgb(255, 255, 255);
     border: 1px black solid;
     padding: 10px;
+    background-color: black;
+    transition: all 0.2s ease-in;
+    border-radius: 5px;
+}
+
+.popuptienda a:hover {
+    border: 1px black solid;
+    background-color: transparent;
+    transition: all 0.2s ease-in;
+    color: black;
 }
 
 /* Carrusel*/
 .titlecarousel{
     font-size: 30px;
-    padding-bottom: 150px;
+    padding-bottom: 10px;
 }
 
 
@@ -465,7 +484,7 @@ a{
 }
 .carousel-container{
     width: 100%;
-    height: 750px;
+    padding: 100px 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -547,11 +566,12 @@ a{
 }
 
 .img_nosotros{
-    margin-right: 85px;
+    margin-right: 100px;
+    width: 40%;
 }
 
 .img_nosotros img{
-    width: 80%;
+    width: 100%;
 
 }
 
@@ -612,14 +632,16 @@ a{
 
 .cafeteria-fisica{
     height: 350px;
-    width :500px;
-    margin-left: 90px;
+    width: 40%;
+    margin-left: 20px;
     padding: 120px 0 0 0;
 }
 
 .descripcion-cafeteria h1{
     font-size: 50px;
     margin-bottom: 20px;
+    color: #805630;
+    width: 400px;
 }
 @media (max-width: 1380px) {
     .descripcion-cafeteria h1{
@@ -627,25 +649,34 @@ a{
     }
 }
 .descripcion-cafeteria h2{
-    color: #805630;
     margin-bottom: 20px;
-    text-decoration: underline;
 }
 .descripcion-cafeteria p{
     font-size: 18px;
     margin-top: 15px;
+    line-height: 1.4;
+    font-family: 'Open Sans', sans-serif;
     
 }
 .bottom-cafeteria {
-    width: 250px;
     height: 50px;
-    text-align: center;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 .bottom-cafeteria a{
+    color: rgb(255, 255, 255);
+    border: 1px black solid;
+    padding: 10px 30px;
+    background-color: black;
+    transition: all 0.2s ease-in;
+    border-radius: 5px;
+    display: inline-flex;
+}
+
+.bottom-cafeteria a:hover {
+    border: 1px black solid;
+    background-color: transparent;
+    transition: all 0.2s ease-in;
     color: black;
-    border: 2px black solid;
-    padding: 10px;
 }
 
 
@@ -724,11 +755,9 @@ a{
     display: flex;
     justify-content: space-between;
     margin: 10px;
-
-    height: 110px;
     align-items: center;
-    padding-top: 110px;
-    margin-bottom: 100px;
+    padding-top: 100px;
+    margin-bottom: 80px;
 }
 .galeria_titulo h1{
     margin-left: 176px;
@@ -746,17 +775,25 @@ a{
 .img-gallery{
     width: 80%;
     margin:  auto ;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
     padding-bottom: 35px;
 }
-.img-gallery img{
+.img-gallery .img{
     width: 100%;
     cursor: pointer;
     transition: 0.4s;
+    width: calc(100% / 4 - 40px);
+    margin: 0 20px 40px;
+    height: auto;
 }
-.img-gallery img:hover{
+
+.img-gallery img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.img-gallery .img:hover{
     transform: scale(0.8) rotate(-15deg);
     border-radius: 20px;
     box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
@@ -771,7 +808,7 @@ a{
     display: none;
     align-items: center;
     justify-content: center;
-    z-index: 100;
+    z-index: 99999;
 }
 .full-img img{
     width: 90%;
@@ -803,6 +840,7 @@ a{
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 2;
     background-color: rgba(0, 0, 0, 0.39);
 }
 .contacto .contacto_img{
@@ -818,13 +856,13 @@ a{
 }
 
 .contacto .contacto_content{
-    width: 100%;
     max-width: 100%;
     margin: 0px 70px auto;
     padding-left: 50px;
     padding-right: 50px;
-    max-width: 1440px;
+    max-width: none;
     position: absolute;
+    z-index: 4;
 }
 
 .contacto .contacto_content .titulo_contacto{
@@ -839,19 +877,22 @@ a{
 .contacto .contacto_content .texto_contacto{
     color: white;
     font-size: 20px;
-    max-width: 700px;
+    max-width: 450px;
     margin: 0 0 40px;
-    
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.4;
 }
 
 .contacto .contacto_content .contacto_boton{
     background-color: transparent;
     color: white;
-    font-size: 25px;
-    padding: 20px 35px 20px;
+    font-size: 18px;
+    padding: 15px 35px 15px;
+    margin: 30px 0 0;
+    display: inline-flex;
     border: 1px solid white;
-transition: all 0.3s ease-in;
-
+    transition: all 0.3s ease-in;
+    border-radius: 5px;
 }
 
 .contacto .contacto_content .contacto_boton:hover{
@@ -863,9 +904,9 @@ transition: all 0.3s ease-in;
 
 .footer{
     width: 100%;
-    height: 500px;
     background-color: #000000;
     display: flex;
+    padding: 80px 50px;
 }
 .footer_left{
     display: flex;
@@ -879,25 +920,30 @@ transition: all 0.3s ease-in;
 .texto_footer{
     color:white;
     font-size: 23px;
-    margin: 0 0 0 130px;
-    width: 550px;
+    padding: 0 0 50px;
 }
 
 .listrrss_footer{
     display: flex;
     align-items: center;
-    margin: 0 0 0 130px;
     justify-content: space-between;
     width: 25%;
+    padding: 0 0 50px;
 }
 .rrss_footer{
     width: 22px;
     display: flex;
     align-items: center;
+    transition: all 0.2s ease-in;
 }
+
+.rrss_footer:hover svg {
+    fill: #E0BC75;
+    transition: all 0.2s ease-in;
+}
+
 .copy{
     color: white;
-    margin: 0 0 0 130px;
 }
 
 .links_footer a{

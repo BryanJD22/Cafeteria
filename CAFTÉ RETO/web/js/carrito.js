@@ -31,6 +31,55 @@ const ITEMS = [
         descripcion: 'dsaadsadsadsd',
         qty: 1
     }
+    ,
+    {
+        id: 4,
+        name: 'Caramelo',
+        price: 1.75,
+        image: 'img/cafecitotipo4.jpg',
+        descripcion: 'dsaadsadsadsd',
+        qty: 1
+    },
+    {
+        id: 4,
+        name: 'Caramelo',
+        price: 1.75,
+        image: 'img/cafecitotipo4.jpg',
+        descripcion: 'dsaadsadsadsd',
+        qty: 1
+    },
+    {
+        id: 4,
+        name: 'Caramelo',
+        price: 1.75,
+        image: 'img/cafecitotipo4.jpg',
+        descripcion: 'dsaadsadsadsd',
+        qty: 1
+    },
+    {
+        id: 4,
+        name: 'Caramelo',
+        price: 1.75,
+        image: 'img/cafecitotipo4.jpg',
+        descripcion: 'dsaadsadsadsd',
+        qty: 1
+    },
+    {
+        id: 4,
+        name: 'Caramelo',
+        price: 1.75,
+        image: 'img/cafecitotipo4.jpg',
+        descripcion: 'dsaadsadsadsd',
+        qty: 1
+    },
+    {
+        id: 4,
+        name: 'Caramelo',
+        price: 1.75,
+        image: 'img/cafecitotipo4.jpg',
+        descripcion: 'dsaadsadsadsd',
+        qty: 1
+    }
 ]
 
 
@@ -73,21 +122,31 @@ function closeCart() {
 }
 
 
+
 function renderItems() {
     ITEMS.forEach((item, idx) => {
-        const itemEl = document.createElement('div')
-        itemEl.classList.add('item')
-        itemEl.onclick = () => addItem(idx, item.id)
-        itemEl.innerHTML = `<img src="${item.image}" alt="" class="item-img"/>
-        <div class="overview">
-        <h3>${item.name}</h3>
-        <p>${item.descripcion}</p>       
-        </div>
-        <button>Add to Cart</button>`
-        itemsEl.appendChild(itemEl)
-    })
-}
+        const itemEl = document.createElement('div');
+        itemEl.classList.add('item');
+        itemEl.id = `item-${item.id}`;
+        itemEl.onclick = () => addItem(idx, item.id);
+        itemEl.innerHTML = `
+            <img src="${item.image}" alt="" class="item-img"/>
+            <div class="overview">
+                <h3>${item.name}</h3>
+                <p>${item.descripcion}</p>
+            </div>
+            <p id="addproduct-${item.id}" class="addproduct">¡Producto añadido!</p>
+            <button id="addtocartproduct-${item.id}" class="addtocartproduct">Add to Cart</button>
+        `;
+        itemsEl.appendChild(itemEl);
+        
+        const addtocartproduct = document.getElementById(`addtocartproduct-${item.id}`);
 
+        addtocartproduct.addEventListener('click', function() {
+            itemEl.classList.add('itemactive');
+        });
+    });
+}
 function renderCartItems() {
     cartItems.innerHTML = ''
     cart_data.forEach(item => {
