@@ -304,6 +304,10 @@ header {
     justify-content: space-between;
     padding: 0 20px;
 }
+.home button{
+    background: transparent;
+    border: none;
+}
 
 .filter-container {
     display: flex;
@@ -362,6 +366,7 @@ header {
     border-radius: 0 5px 5px 0;
     border: none;
     background-color: transparent;
+    
 }
 
 .input:focus {
