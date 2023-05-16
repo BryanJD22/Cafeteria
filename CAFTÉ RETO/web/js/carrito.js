@@ -4,6 +4,7 @@ const ITEMS = [
         name: 'Capuccino',
         price: 2.5,
         image: 'img/cafecitotipo1.jpg',
+        descripcion: 'dsaadsadsadsd',
         qty: 1
     },
     {
@@ -11,6 +12,7 @@ const ITEMS = [
         name: 'Descafeinado',
         price: 2,
         image: 'img/cafecitotipo2.jpg',
+        descripcion: 'dsaadsadsadsd',
         qty: 1
     },
     {
@@ -18,6 +20,7 @@ const ITEMS = [
         name: 'Colombia',
         price: 3,
         image: 'img/cafecitotipo3.jpg',
+        descripcion: 'dsaadsadsadsd',
         qty: 1
     },
     {
@@ -25,6 +28,7 @@ const ITEMS = [
         name: 'Caramelo',
         price: 1.75,
         image: 'img/cafecitotipo4.jpg',
+        descripcion: 'dsaadsadsadsd',
         qty: 1
     }
 ]
@@ -74,7 +78,11 @@ function renderItems() {
         const itemEl = document.createElement('div')
         itemEl.classList.add('item')
         itemEl.onclick = () => addItem(idx, item.id)
-        itemEl.innerHTML = `<img src="${item.image}" alt="" />
+        itemEl.innerHTML = `<img src="${item.image}" alt="" class="item-img"/>
+        <div class="overview">
+        <h3>${item.name}</h3>
+        <p>${item.descripcion}</p>       
+        </div>
         <button>Add to Cart</button>`
         itemsEl.appendChild(itemEl)
     })
