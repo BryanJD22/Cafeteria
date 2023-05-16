@@ -3,7 +3,7 @@ const ITEMS = [
         id: 1,
         name: 'Capuccino',
         price: 2.5,
-        image: 'img/cafecitotipo2.jpg',
+        image: 'img/cafecitotipo1.jpg',
         qty: 1
     },
     {
@@ -27,50 +27,6 @@ const ITEMS = [
         image: 'img/cafecitotipo4.jpg',
         qty: 1
     }
-    ,
-    {
-        id: 4,
-        name: 'Caramelo',
-        price: 1.75,
-        image: 'img/cafecitotipo4.jpg',
-        qty: 1
-    },
-    {
-        id: 4,
-        name: 'Caramelo',
-        price: 1.75,
-        image: 'img/cafecitotipo4.jpg',
-        qty: 1
-    },
-    {
-        id: 4,
-        name: 'Caramelo',
-        price: 1.75,
-        image: 'img/cafecitotipo4.jpg',
-        qty: 1
-    },
-    {
-        id: 4,
-        name: 'Caramelo',
-        price: 1.75,
-        image: 'img/cafecitotipo4.jpg',
-        qty: 1
-    },
-    {
-        id: 4,
-        name: 'Caramelo',
-        price: 1.75,
-        image: 'img/cafecitotipo4.jpg',
-        qty: 1
-    },
-    {
-        id: 4,
-        name: 'Caramelo',
-        price: 1.75,
-        image: 'img/cafecitotipo4.jpg',
-        qty: 1
-    }
-  
 ]
 
 
