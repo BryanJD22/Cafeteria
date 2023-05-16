@@ -1,88 +1,186 @@
 const ITEMS = [
     //Aqui hay que pasar la url de base de datos
-    {
-        id: 1,
-        name: 'Capuccino',
-        price: 2.5,
-        image: 'img/cafecitotipo1.jpg',
-        descripcion: 'dsaadsadsadsd',
-        qty: 1
-    },
-    {
-        id: 2,
-        name: 'Descafeinado',
-        price: 2,
-        image: 'img/cafecitotipo2.jpg',
-        descripcion: 'dsaadsadsadsd',
-        qty: 1
-    },
-    {
-        id: 3,
-        name: 'Colombia',
-        price: 3,
-        image: 'img/cafecitotipo3.jpg',
-        descripcion: 'dsaadsadsadsd',
-        qty: 1
-    },
-    {
-        id: 4,
-        name: 'Caramelo',
-        price: 1.75,
-        image: 'img/cafecitotipo4.jpg',
-        descripcion: 'dsaadsadsadsd',
-        qty: 1
-    }
-    ,
-    {
-        id: 4,
-        name: 'Caramelo',
-        price: 1.75,
-        image: 'img/cafecitotipo4.jpg',
-        descripcion: 'dsaadsadsadsd',
-        qty: 1
-    },
-    {
-        id: 4,
-        name: 'Caramelo',
-        price: 1.75,
-        image: 'img/cafecitotipo4.jpg',
-        descripcion: 'dsaadsadsadsd',
-        qty: 1
-    },
-    {
-        id: 4,
-        name: 'Caramelo',
-        price: 1.75,
-        image: 'img/cafecitotipo4.jpg',
-        descripcion: 'dsaadsadsadsd',
-        qty: 1
-    },
-    {
-        id: 4,
-        name: 'Caramelo',
-        price: 1.75,
-        image: 'img/cafecitotipo4.jpg',
-        descripcion: 'dsaadsadsadsd',
-        qty: 1
-    },
-    {
-        id: 4,
-        name: 'Caramelo',
-        price: 1.75,
-        image: 'img/cafecitotipo4.jpg',
-        descripcion: 'dsaadsadsadsd',
-        qty: 1
-    },
-    {
-        id: 4,
-        name: 'Caramelo',
-        price: 1.75,
-        image: 'img/cafecitotipo4.jpg',
-        descripcion: 'dsaadsadsadsd',
-        qty: 1
-    }
+   {
+    id: 1,
+    name: "American Coffee",
+    description: "Black coffee with hot water",
+    category: "Coffee",
+    price: 0.25,
+    image: "img/carrusel/imagenCafe1.png",
+    available: 1
+  },
+  {
+    id: 2,
+    name: "Espresso",
+    description: "Strong and concentrated black coffee",
+    category: "Coffee",
+    price: 0.35,
+    image: "img/carrusel/imagenCafe2.png",
+    available: 1
+  },
+  {
+    id: 3,
+    name: "Latte",
+    description: "Coffee with hot milk and foam",
+    category: "Coffee",
+    price: 0.45,
+    image: "img/carrusel/imagenCafe3.png",
+    available: 1
+  },
+  {
+    id: 4,
+    name: "Mocha",
+    description: "Coffee with milk, chocolate, and cream",
+    category: "Coffee",
+    price: 0.55,
+    image: "img/carrusel/imagenCafe4.png",
+    available: 1
+  },
+  {
+    id: 5,
+    name: "Cappuccino",
+    description: "Coffee with hot milk and foam",
+    category: "Coffee",
+    price: 0.45,
+    image: "img/carrusel/imagenCafe5.png",
+    available: 1
+  },
+  {
+    id: 6,
+    name: "Frappé",
+    description: "Coffee with ice, milk, and sugar",
+    category: "Coffee",
+    price: 0.4,
+    image: "img/carrusel/imagenCafe6.png",
+    available: 1
+  },
+  {
+    id: 7,
+    name: "Iced Coffee",
+    description: "Coffee with ice and milk",
+    category: "Coffee",
+    price: 0.35,
+    image: "img/carrusel/imagenCafe7.png",
+    available: 1
+  },
+  {
+    id: 8,
+    name: "Café au Lait",
+    description: "Coffee with hot milk",
+    category: "Coffee",
+    price: 0.3,
+    image: "img/carrusel/imagenCafe8.png",
+    available: 1
+  },
+  {
+    id: 9,
+    name: "Viennese Coffee",
+    description: "Coffee with cream and chocolate",
+    category: "Coffee",
+    price: 0.6,
+    image: "img/carrusel/imagenCafe9.png",
+    available: 1
+  },
+  {
+    id: 10,
+    name: "Irish Coffee",
+    description: "Coffee with whiskey and cream",
+    category: "Coffee",
+    price: 0.7,
+    image: "img/carrusel/imagenCafe10.png",
+    available: 1
+  },
+  {
+    id: 11,
+    name: "Green Tea",
+    description: "Delicate and refreshing tea made from unoxidized leaves",
+    category: "Tea",
+    price: 0.25,
+    image: "img/carrusel/imagenTe1.jpg",
+    available: 1
+  },
+{
+id: 12,
+name: "Earl Grey",
+description: "Black tea flavored with bergamot oil, known for its citrusy aroma",
+category: "Tea",
+price: 0.35,
+image: "img/carrusel/imagenTe2.jpg",
+available: 1
+},
+{
+i: 13,
+name: "Chamomile",
+description: "Herbal tea made from dried chamomile flowers, known for its calming properties",
+category: "Tea",
+price: 0.45,
+image: "img/carrusel/imagenTe3.jpg",
+available: 1
+},
+{
+id: 14,
+name: "Oolong",
+description: "Partially oxidized tea with a rich and complex flavor profile",
+category: "Tea",
+price: 0.55,
+image: "img/carrusel/imagenTe4.jpg",
+available: 1
+},
+{
+id: 15,
+name: "Peppermint",
+description: "Herbal tea with a minty and refreshing taste",
+category: "Tea",
+price: 0.45,
+image: "img/carrusel/imagenTe5.jpg",
+available: 1
+},
+{
+"id": 16,
+name: "Rooibos",
+description: "Caffeine-free herbal tea from South Africa, known for its sweet and nutty flavor",
+category: "Tea",
+price: 0.4,
+image: "img/carrusel/imagenTe6.jpg",
+available: 1
+},
+{
+id: 17,
+name: "Hibiscus",
+description: "Herbal tea made from the dried petals of hibiscus flowers, known for its tart and fruity taste",
+category: "Tea",
+price: 0.35,
+image: "img/carrusel/imagenTe7.jpg",
+available: 1
+},
+{
+id: 18,
+name: "Matcha",
+description: "Vibrant green tea powder made from finely ground tea leaves, traditionally used in Japanese tea ceremonies",
+category: "Tea",
+price: 0.3,
+image: "img/carrusel/imagenTe8.jpg",
+available: 1
+},
+{
+id: 19,
+name: "White Tea",
+description: "Subtle and delicate tea made from young tea leaves and buds",
+category: "Tea",
+price: 0.6,
+image: "img/carrusel/imagenTe9.jpg",
+available: 1
+},
+{
+id: 20,
+name: "Masala Chai",
+description: "Spiced tea blend with a combination of black tea, milk, and aromatic spices like cinnamon, cardamom, and ginger",
+category: "Tea",
+price: 0.7,
+image: "img/carrusel/imagenTe10.jpg",
+available: 1
+}
 ]
-
 
 const openBtn = document.getElementById('open_cart_btn')
 const cart = document.getElementById('sidecart')
@@ -134,7 +232,7 @@ function renderItems() {
             <img src="${item.image}" alt="" class="item-img"/>
             <div class="overview">
                 <h3>${item.name}</h3>
-                <p>${item.descripcion}</p>
+                <p>${item.description}</p>
             </div>
             <p id="addproduct-${item.id}" class="addproduct">¡Producto añadido!</p>
             <button id="addtocartproduct-${item.id}" class="addtocartproduct">Add to Cart</button>
@@ -164,7 +262,7 @@ function renderCartItems() {
         <strong>${item.price}$</strong>
         <div class="qty">
             <span onclick="decreaseQty(${item.id})">-</span>
-            <strong>${item.qty}</strong>
+            <strong>${item.available}</strong>
             <span onclick="increaseQty(${item.id})">+</span>
         </div>
     </div>`
@@ -197,26 +295,26 @@ function removeCartItem(itemId) {
 
 function increaseQty(itemId){
     cart_data = cart_data.map(item => item.id.toString() === itemId.
-    toString() ? {...item, qty: item.qty + 1} : item)
+    toString() ? {...item, available: item.available + 1} : item)
     updateCart()
 }
 
 function decreaseQty(itemId){
     cart_data = cart_data.map(item => item.id.toString() === itemId.
-    toString() ? {...item, qty: item.qty > 1 ? item.qty - 1: item.qty} : item)
+    toString() ? {...item, available: item.available > 1 ? item.available - 1: item.available} : item)
     updateCart()
 }
 
 //Calcular el numero de productos añadidos
 function calcItemsNum(){
     let itemsCount = 0
-    cart_data.forEach(item => itemsCount += item.qty)
+    cart_data.forEach(item => itemsCount += item.available)
     itemsNum.innerText = itemsCount
 }
 //////////////////////////////////////////////
 //Calcular el precio de productos añadidos
 function calcSubtotalPrice(){
     let subtotal = 0
-    cart_data.forEach(item => (subtotal += item.price * item.qty))
+    cart_data.forEach(item => (subtotal += item.price * item.available))
     subtotalPrice.innerText = subtotal
 }
