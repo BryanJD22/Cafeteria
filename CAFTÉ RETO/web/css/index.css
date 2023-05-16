@@ -590,8 +590,9 @@ a{
 }
 
 .club .tag {
-    font-size: 22px;
+    font-size: 20px;
     z-index: 1;
+    color: maroon;
 }
 
 .club .title {
@@ -642,7 +643,7 @@ a{
     margin-top: 50px;
 }
 .bottom-cafeteria a{
-    color: rgb(255, 255, 255);
+    color: black;
     border: 2px black solid;
     padding: 10px;
 }
