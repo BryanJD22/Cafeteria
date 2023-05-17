@@ -1,187 +1,189 @@
 const ITEMS = [
     //Aqui hay que pasar la url de base de datos
-   {
-    id: 1,
-    name: "American Coffee",
-    description: "Black coffee with hot water",
-    category: "Coffee",
-    price: 0.25,
-    image: "img/carrusel/imagenCafe1.png",
-    available: 1
-  },
-  {
-    id: 2,
-    name: "Espresso",
-    description: "Strong and concentrated black coffee",
-    category: "Coffee",
-    price: 0.35,
-    image: "img/carrusel/imagenCafe2.png",
-    available: 1
-  },
-  {
-    id: 3,
-    name: "Latte",
-    description: "Coffee with hot milk and foam",
-    category: "Coffee",
-    price: 0.45,
-    image: "img/carrusel/imagenCafe3.png",
-    available: 1
-  },
-  {
-    id: 4,
-    name: "Mocha",
-    description: "Coffee with milk, chocolate, and cream",
-    category: "Coffee",
-    price: 0.55,
-    image: "img/carrusel/imagenCafe4.png",
-    available: 1
-  },
-  {
-    id: 5,
-    name: "Cappuccino",
-    description: "Coffee with hot milk and foam",
-    category: "Coffee",
-    price: 0.45,
-    image: "img/carrusel/imagenCafe5.png",
-    available: 1
-  },
-  {
-    id: 6,
-    name: "Frappé",
-    description: "Coffee with ice, milk, and sugar",
-    category: "Coffee",
-    price: 0.4,
-    image: "img/carrusel/imagenCafe6.png",
-    available: 1
-  },
-  {
-    id: 7,
-    name: "Iced Coffee",
-    description: "Coffee with ice and milk",
-    category: "Coffee",
-    price: 0.35,
-    image: "img/carrusel/imagenCafe7.png",
-    available: 1
-  },
-  {
-    id: 8,
-    name: "Café au Lait",
-    description: "Coffee with hot milk",
-    category: "Coffee",
-    price: 0.3,
-    image: "img/carrusel/imagenCafe8.png",
-    available: 1
-  },
-  {
-    id: 9,
-    name: "Viennese Coffee",
-    description: "Coffee with cream and chocolate",
-    category: "Coffee",
-    price: 0.6,
-    image: "img/carrusel/imagenCafe9.png",
-    available: 1
-  },
-  {
-    id: 10,
-    name: "Irish Coffee",
-    description: "Coffee with whiskey and cream",
-    category: "Coffee",
-    price: 0.7,
-    image: "img/carrusel/imagenCafe10.png",
-    available: 1
-  },
-  {
-    id: 11,
-    name: "Green Tea",
-    description: "Delicate and refreshing tea made from unoxidized leaves",
-    category: "Tea",
-    price: 0.25,
-    image: "img/carrusel/imagenTe1.jpg",
-    available: 1
-  },
-{
-id: 12,
-name: "Earl Grey",
-description: "Black tea flavored with bergamot oil, known for its citrusy aroma",
-category: "Tea",
-price: 0.35,
-image: "img/carrusel/imagenTe2.jpg",
-available: 1
-},
-{
-i: 13,
-name: "Chamomile",
-description: "Herbal tea made from dried chamomile flowers, known for its calming properties",
-category: "Tea",
-price: 0.45,
-image: "img/carrusel/imagenTe3.jpg",
-available: 1
-},
-{
-id: 14,
-name: "Oolong",
-description: "Partially oxidized tea with a rich and complex flavor profile",
-category: "Tea",
-price: 0.55,
-image: "img/carrusel/imagenTe4.jpg",
-available: 1
-},
-{
-id: 15,
-name: "Peppermint",
-description: "Herbal tea with a minty and refreshing taste",
-category: "Tea",
-price: 0.45,
-image: "img/carrusel/imagenTe5.jpg",
-available: 1
-},
-{
-"id": 16,
-name: "Rooibos",
-description: "Caffeine-free herbal tea from South Africa, known for its sweet and nutty flavor",
-category: "Tea",
-price: 0.4,
-image: "img/carrusel/imagenTe6.jpg",
-available: 1
-},
-{
-id: 17,
-name: "Hibiscus",
-description: "Herbal tea made from the dried petals of hibiscus flowers, known for its tart and fruity taste",
-category: "Tea",
-price: 0.35,
-image: "img/carrusel/imagenTe7.jpg",
-available: 1
-},
-{
-id: 18,
-name: "Matcha",
-description: "Vibrant green tea powder made from finely ground tea leaves, traditionally used in Japanese tea ceremonies",
-category: "Tea",
-price: 0.3,
-image: "img/carrusel/imagenTe8.jpg",
-available: 1
-},
-{
-id: 19,
-name: "White Tea",
-description: "Subtle and delicate tea made from young tea leaves and buds",
-category: "Tea",
-price: 0.6,
-image: "img/carrusel/imagenTe9.jpg",
-available: 1
-},
-{
-id: 20,
-name: "Masala Chai",
-description: "Spiced tea blend with a combination of black tea, milk, and aromatic spices like cinnamon, cardamom, and ginger",
-category: "Tea",
-price: 0.7,
-image: "img/carrusel/imagenTe10.jpg",
-available: 1
-}
+    {
+        id: 1,
+        name: "American Coffee",
+        description: "Black coffee with hot water",
+        category: "Coffee",
+        price: 0.25,
+        image: "img/carrusel/imagenCafe1.png",
+        available: 1
+    },
+    {
+        id: 2,
+        name: "Espresso",
+        description: "Strong and concentrated black coffee",
+        category: "Coffee",
+        price: 0.35,
+        image: "img/carrusel/imagenCafe2.png",
+        available: 1
+    },
+    {
+        id: 3,
+        name: "Latte",
+        description: "Coffee with hot milk and foam",
+        category: "Coffee",
+        price: 0.45,
+        image: "img/carrusel/imagenCafe3.png",
+        available: 1
+    },
+    {
+        id: 4,
+        name: "Mocha",
+        description: "Coffee with milk, chocolate, and cream",
+        category: "Coffee",
+        price: 0.55,
+        image: "img/carrusel/imagenCafe4.png",
+        available: 1
+    },
+    {
+        id: 5,
+        name: "Cappuccino",
+        description: "Coffee with hot milk and foam",
+        category: "Coffee",
+        price: 0.45,
+        image: "img/carrusel/imagenCafe5.png",
+        available: 1
+    },
+    {
+        id: 6,
+        name: "Frappé",
+        description: "Coffee with ice, milk, and sugar",
+        category: "Coffee",
+        price: 0.4,
+        image: "img/carrusel/imagenCafe6.png",
+        available: 1
+    },
+    {
+        id: 7,
+        name: "Iced Coffee",
+        description: "Coffee with ice and milk",
+        category: "Coffee",
+        price: 0.35,
+        image: "img/carrusel/imagenCafe7.png",
+        available: 1
+    },
+    {
+        id: 8,
+        name: "Café au Lait",
+        description: "Coffee with hot milk",
+        category: "Coffee",
+        price: 0.3,
+        image: "img/carrusel/imagenCafe8.png",
+        available: 1
+    },
+    {
+        id: 9,
+        name: "Viennese Coffee",
+        description: "Coffee with cream and chocolate",
+        category: "Coffee",
+        price: 0.6,
+        image: "img/carrusel/imagenCafe9.png",
+        available: 1
+    },
+    {
+        id: 10,
+        name: "Irish Coffee",
+        description: "Coffee with whiskey and cream",
+        category: "Coffee",
+        price: 0.7,
+        image: "img/carrusel/imagenCafe10.png",
+        available: 1
+    },
+    {
+        id: 11,
+        name: "Green Tea",
+        description: "Delicate and refreshing tea made from unoxidized leaves",
+        category: "Tea",
+        price: 0.25,
+        image: "img/carrusel/imagenTe1.jpg",
+        available: 1
+    },
+    {
+        id: 12,
+        name: "Earl Grey",
+        description: "Black tea flavored with bergamot oil, known for its citrusy aroma",
+        category: "Tea",
+        price: 0.35,
+        image: "img/carrusel/imagenTe2.jpg",
+        available: 1
+    },
+    {
+        i: 13,
+        name: "Chamomile",
+        description: "Herbal tea made from dried chamomile flowers, known for its calming properties",
+        category: "Tea",
+        price: 0.45,
+        image: "img/carrusel/imagenTe3.jpg",
+        available: 1
+    },
+    {
+        id: 14,
+        name: "Oolong",
+        description: "Partially oxidized tea with a rich and complex flavor profile",
+        category: "Tea",
+        price: 0.55,
+        image: "img/carrusel/imagenTe4.jpg",
+        available: 1
+    },
+    {
+        id: 15,
+        name: "Peppermint",
+        description: "Herbal tea with a minty and refreshing taste",
+        category: "Tea",
+        price: 0.45,
+        image: "img/carrusel/imagenTe5.jpg",
+        available: 1
+    },
+    {
+        "id": 16,
+        name: "Rooibos",
+        description: "Caffeine-free herbal tea from South Africa, known for its sweet and nutty flavor",
+        category: "Tea",
+        price: 0.4,
+        image: "img/carrusel/imagenTe6.jpg",
+        available: 1
+    },
+    {
+        id: 17,
+        name: "Hibiscus",
+        description: "Herbal tea made from the dried petals of hibiscus flowers, known for its tart and fruity taste",
+        category: "Tea",
+        price: 0.35,
+        image: "img/carrusel/imagenTe7.jpg",
+        available: 1
+    },
+    {
+        id: 18,
+        name: "Matcha",
+        description: "Vibrant green tea powder made from finely ground tea leaves, traditionally used in Japanese tea ceremonies",
+        category: "Tea",
+        price: 0.3,
+        image: "img/carrusel/imagenTe8.jpg",
+        available: 1
+    },
+    {
+        id: 19,
+        name: "White Tea",
+        description: "Subtle and delicate tea made from young tea leaves and buds",
+        category: "Tea",
+        price: 0.6,
+        image: "img/carrusel/imagenTe9.jpg",
+        available: 1
+    },
+    {
+        id: 20,
+        name: "Masala Chai",
+        description: "Spiced tea blend with a combination of black tea, milk, and aromatic spices like cinnamon, cardamom, and ginger",
+        category: "Tea",
+        price: 0.7,
+        image: "img/carrusel/imagenTe10.jpg",
+        available: 1
+    }
 ]
-
+const allFilter = document.getElementById('filter3')
+const coffeFilter = document.getElementById('filter1')
+const teaFilter = document.getElementById('filter2')
 const openBtn = document.getElementById('open_cart_btn')
 const cart = document.getElementById('sidecart')
 const closeBtn = document.getElementById('close_btn')
@@ -197,6 +199,16 @@ let cart_data = [] //Creo que aqui hay que añadir la url de base de datos
 //Abrir y cerrar carrito
 openBtn.addEventListener('click', openCart)
 closeBtn.addEventListener('click', closeCart)
+
+
+// Filtros
+coffeFilter.addEventListener('click',renderCoffeeItems)
+teaFilter.addEventListener('click',renderTeaItems)
+allFilter.addEventListener('click',renderItems)
+
+
+
+
 
 renderItems()
 renderCartItems()
@@ -241,7 +253,7 @@ function renderItems() {
         //Esto es para el popup de añadir el carrito 
         const addtocartproduct = document.getElementById(`addtocartproduct-${item.id}`);
 
-        addtocartproduct.addEventListener('click', function() {
+        addtocartproduct.addEventListener('click', function () {
             itemEl.classList.add('itemactive');
         });
     });
@@ -293,28 +305,88 @@ function removeCartItem(itemId) {
     updateCart()
 }
 
-function increaseQty(itemId){
+function increaseQty(itemId) {
     cart_data = cart_data.map(item => item.id.toString() === itemId.
-    toString() ? {...item, available: item.available + 1} : item)
+        toString() ? { ...item, available: item.available + 1 } : item)
     updateCart()
 }
 
-function decreaseQty(itemId){
+function decreaseQty(itemId) {
     cart_data = cart_data.map(item => item.id.toString() === itemId.
-    toString() ? {...item, available: item.available > 1 ? item.available - 1: item.available} : item)
+        toString() ? { ...item, available: item.available > 1 ? item.available - 1 : item.available } : item)
     updateCart()
 }
 
 //Calcular el numero de productos añadidos
-function calcItemsNum(){
+function calcItemsNum() {
     let itemsCount = 0
     cart_data.forEach(item => itemsCount += item.available)
     itemsNum.innerText = itemsCount
 }
 //////////////////////////////////////////////
 //Calcular el precio de productos añadidos
-function calcSubtotalPrice(){
+function calcSubtotalPrice() {
     let subtotal = 0
     cart_data.forEach(item => (subtotal += item.price * item.available))
     subtotalPrice.innerText = subtotal
+}
+
+
+
+function renderCoffeeItems() {
+
+    ITEMS.forEach((item/*Este es el item de la base de datos con su id, nombre etc*/, idx) => {
+        if (item.category == 'Coffee') {
+            const itemEl = document.createElement('div');//no tiene s, no es items es item
+            itemEl.classList.add('item');
+            itemEl.id = `item-${item.id}`;
+            itemEl.onclick = () => addItem(idx, item.id);
+            itemEl.innerHTML = `
+            <img src="${item.image}" alt="" class="item-img"/>
+            <div class="overview">
+                <h3>${item.name}</h3>
+                <p>${item.description}</p>
+            </div>
+            <p id="addproduct-${item.id}" class="addproduct">¡Producto añadido!</p>
+            <button id="addtocartproduct-${item.id}" class="addtocartproduct">Add to Cart</button>
+        `;
+            itemsEl.appendChild(itemEl);
+            //Esto es para el popup de añadir el carrito 
+            const addtocartproduct = document.getElementById(`addtocartproduct-${item.id}`);
+
+            addtocartproduct.addEventListener('click', function () {
+                itemEl.classList.add('itemactive');
+            });
+        }
+
+    });
+}
+
+function renderTeaItems() {
+
+    ITEMS.forEach((item/*Este es el item de la base de datos con su id, nombre etc*/, idx) => {
+        if (item.category == 'Tea') {
+            const itemEl = document.createElement('div');//no tiene s, no es items es item
+            itemEl.classList.add('item');
+            itemEl.id = `item-${item.id}`;
+            itemEl.onclick = () => addItem(idx, item.id);
+            itemEl.innerHTML = `
+            <img src="${item.image}" alt="" class="item-img"/>
+            <div class="overview">
+                <h3>${item.name}</h3>
+                <p>${item.description}</p>
+            </div>
+            <p id="addproduct-${item.id}" class="addproduct">¡Producto añadido!</p>
+            <button id="addtocartproduct-${item.id}" class="addtocartproduct">Add to Cart</button>
+        `;
+            itemsEl.appendChild(itemEl);
+            //Esto es para el popup de añadir el carrito 
+            const addtocartproduct = document.getElementById(`addtocartproduct-${item.id}`);
+
+            addtocartproduct.addEventListener('click', function () {
+                itemEl.classList.add('itemactive');
+            });
+        }
+
+    });
 }

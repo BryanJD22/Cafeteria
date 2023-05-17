@@ -453,12 +453,7 @@ header {
 }
 
 
-.items .item.itemactive {
-    .addproduct {
-        display: flex;
-        animation: fade-in-prod 1.5s ease-in forwards;
-    }
-}
+
 
 @keyframes fade-in-prod {
     0% {
