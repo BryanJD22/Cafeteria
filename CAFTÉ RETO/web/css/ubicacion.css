@@ -1,22 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@500&family=Bitter&display=swap');
+
+* {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  font-family: 'Bitter', serif;
+  
+
+}
 .ubicaciones {
-    display: flex;
-  }
   
-  .ubicacion {
-    flex: 1;
-    padding: 10px;
-    border: 3px solid rgb(105, 53, 53);
-    margin-right: 10px;
-  }
+  margin-top: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
+
+}
+.imagen::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+.imagen{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://www.sabervivirtv.com/medio/2022/06/09/6-beneficios-del-cafe-para-tu-salud-que-quiza-no-conozcas_226fdeb5_1200x630.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0 ;
+
+}
+.ubicacion {
+  color: whitesmoke;
+  flex: 1;
+  padding: 10px;
+  border: 3px solid transparent;
+  margin: 0 auto;
+}
+
+#mapa {
+  flex: 1;
+  height: 400px;
+  /* Ajusta la altura del mapa según tus necesidades */
+}
+body{
+  width: 98vw;
+  height: 98vh;
+  align-items: center;
+  justify-content: center;
+ 
   
-  #mapa {
-    flex: 1;
-    height: 400px; /* Ajusta la altura del mapa según tus necesidades */
-  }
-  body{
-      background-color: pink;
-  }
-  .verde{
-    color: rgb(5, 150, 5);
-    font-weight: 500;
-  }
+}
+
+
+.verde {
+  color: rgb(5, 150, 5);
+  font-weight: 500;
+}
