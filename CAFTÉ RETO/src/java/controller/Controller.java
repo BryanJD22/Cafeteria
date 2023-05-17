@@ -1,6 +1,5 @@
 package controller;
 
-import controller.action.PeliculaAction;
 import controller.action.UsuarioAction;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -21,7 +20,7 @@ public class Controller extends HttpServlet {
         String[] arrayAction = action.split("\\.");
 
         switch (arrayAction[0]) {
-            case "USUARIO":
+            case "USER":
                 out.print(new UsuarioAction().
                         execute(request, response));
                 break;

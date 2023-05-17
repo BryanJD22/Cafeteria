@@ -181,7 +181,9 @@ const ITEMS = [
         available: 1
     }
 ]
-
+const allFilter = document.getElementById('filter3')
+const coffeFilter = document.getElementById('filter1')
+const teaFilter = document.getElementById('filter2')
 const openBtn = document.getElementById('open_cart_btn')
 const cart = document.getElementById('sidecart')
 const closeBtn = document.getElementById('close_btn')
@@ -197,6 +199,16 @@ let cart_data = [] //Creo que aqui hay que añadir la url de base de datos
 //Abrir y cerrar carrito
 openBtn.addEventListener('click', openCart)
 closeBtn.addEventListener('click', closeCart)
+
+
+// Filtros
+coffeFilter.addEventListener('click',renderCoffeeItems)
+teaFilter.addEventListener('click',renderTeaItems)
+allFilter.addEventListener('click',renderItems)
+
+
+
+
 
 renderItems()
 renderCartItems()
@@ -296,13 +308,21 @@ function removeCartItem(itemId) {
 
 function increaseQty(itemId) {
     cart_data = cart_data.map(item => item.id.toString() === itemId.
+<<<<<<< HEAD
         toString() ? { ...item, qty: item.qty + 1 } : item)
+=======
+        toString() ? { ...item, available: item.available + 1 } : item)
+>>>>>>> 965da631da83df90a1246114625a5d22576fcc35
     updateCart()
 }
 
 function decreaseQty(itemId) {
     cart_data = cart_data.map(item => item.id.toString() === itemId.
+<<<<<<< HEAD
         toString() ? { ...item, qty: item.qty > 1 ? item.qty - 1 : item.available } : item)
+=======
+        toString() ? { ...item, available: item.available > 1 ? item.available - 1 : item.available } : item)
+>>>>>>> 965da631da83df90a1246114625a5d22576fcc35
     updateCart()
 }
 
@@ -318,4 +338,64 @@ function calcSubtotalPrice() {
     let subtotal = 0
     cart_data.forEach(item => (subtotal += item.price * item.qty))
     subtotalPrice.innerText = subtotal
+}
+
+
+
+function renderCoffeeItems() {
+
+    ITEMS.forEach((item/*Este es el item de la base de datos con su id, nombre etc*/, idx) => {
+        if (item.category == 'Coffee') {
+            const itemEl = document.createElement('div');//no tiene s, no es items es item
+            itemEl.classList.add('item');
+            itemEl.id = `item-${item.id}`;
+            itemEl.onclick = () => addItem(idx, item.id);
+            itemEl.innerHTML = `
+            <img src="${item.image}" alt="" class="item-img"/>
+            <div class="overview">
+                <h3>${item.name}</h3>
+                <p>${item.description}</p>
+            </div>
+            <p id="addproduct-${item.id}" class="addproduct">¡Producto añadido!</p>
+            <button id="addtocartproduct-${item.id}" class="addtocartproduct">Add to Cart</button>
+        `;
+            itemsEl.appendChild(itemEl);
+            //Esto es para el popup de añadir el carrito 
+            const addtocartproduct = document.getElementById(`addtocartproduct-${item.id}`);
+
+            addtocartproduct.addEventListener('click', function () {
+                itemEl.classList.add('itemactive');
+            });
+        }
+
+    });
+}
+
+function renderTeaItems() {
+
+    ITEMS.forEach((item/*Este es el item de la base de datos con su id, nombre etc*/, idx) => {
+        if (item.category == 'Tea') {
+            const itemEl = document.createElement('div');//no tiene s, no es items es item
+            itemEl.classList.add('item');
+            itemEl.id = `item-${item.id}`;
+            itemEl.onclick = () => addItem(idx, item.id);
+            itemEl.innerHTML = `
+            <img src="${item.image}" alt="" class="item-img"/>
+            <div class="overview">
+                <h3>${item.name}</h3>
+                <p>${item.description}</p>
+            </div>
+            <p id="addproduct-${item.id}" class="addproduct">¡Producto añadido!</p>
+            <button id="addtocartproduct-${item.id}" class="addtocartproduct">Add to Cart</button>
+        `;
+            itemsEl.appendChild(itemEl);
+            //Esto es para el popup de añadir el carrito 
+            const addtocartproduct = document.getElementById(`addtocartproduct-${item.id}`);
+
+            addtocartproduct.addEventListener('click', function () {
+                itemEl.classList.add('itemactive');
+            });
+        }
+
+    });
 }

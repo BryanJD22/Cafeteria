@@ -21,44 +21,47 @@
     <div class="content-container">
         <div class="menu-left">
             <div id="options">
-                <a class="option" id="inicio" class="links" href="inicio.html">- Profile -</a>
-                <a class="option" id="comite" class="links" href="comite.html">- Committee -</a>
-                <a class="option" id="ayuda" class="links" href="ayuda.html">- Help -</a>
-                <a class="option" id="noticias" class="links" href="noticias.html">- News -</a>
-                <a class="option" id="home" class="links" href="index.html">- Home -</a>
+                <a class="option" id="inicio" class="links" href="inicio.html">- Inicio -</a>
+                <a class="option" id="comite" class="links" href="comite.html">- Comite -</a>
+                <a class="option" id="ayuda" class="links" href="ayuda.html">- Ayuda -</a>
+                <a class="option" id="noticias" class="links" href="noticias.html">- Noticias -</a>
             </div>
 
 
         </div>
         <div class="content">
             <div class="welcome-user">
-                <h1>Bienvenido Jorge Alquezar!</h1>
+                <h1 id="nombre1"> </h1>
                 <h3>Esperemos que tenga un excelente día de trabajo</h3>
             </div>
             <div class="content-user">
                 <div class="profile">
-                    <img src="img/carita.jpeg" alt="" id="profile-image">
+                    <img src="images/carita.jpeg" alt="" id="profile-image">
                     <div class="profile-info">
-                        <div class="description" id="name">
-                            <h4>NOMBRE:</h4>
-                            <p>Jorge</p>
-                        </div>
-                        <div class="description" id="surname">
-                            <h4>APELLIDOS:</h4>
-                            <p>Alquezar Martinez</p>
-                        </div>
-                        <div class="description" id="date">
-                            <h4>FECHA DE NACIMIENTO:</h4>
-                            <p>12/04/2004</p>
-                        </div>
-                        <div class="description" id="job">
-                            <h4>PUESTO DEL TRABAJADOR:</h4>
-                            <p>Mozo de almacén</p>
-                        </div>
-                        <div class="description" id="id">
-                            <h4>IDENTIFICADOR:</h4>
-                            <p>234765</p>
-                        </div>
+                        <div>
+                            <label for="name">Nombre:</label>
+                            <input type="text" id="name" readonly>
+                          </div>
+                          <div>
+                            <label for="surname">Apellidos:</label>
+                            <input type="text" id="surname" readonly>
+                          </div>
+                          
+                          <div>
+                            <label for="date">Fecha de nacimiento:</label>
+                            <input type="text" id="date" readonly>
+                          </div>
+                          
+                          <div>
+                            <label for="job">Puesto:</label>
+                            <input type="text" id="job" readonly>
+                          </div>
+                          
+                          <div>
+                            <label for="id">Identificador:</label>
+                            <input type="text" id="id" readonly>
+                          </div>
+                          
 
                     </div>
                 </div>
@@ -87,7 +90,7 @@
         </div>
     </div>
 
-    <script src='js/intranet.js'></script>
+    <script src='js/InfoPersonas.js'></script>
 </body>
 
 </html>

@@ -3,8 +3,9 @@ package controller.action;
 import java.util.ArrayList;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import model.Mensaje;
 import model.UserDAO;
-import model.Usuario;
+import model.User;
 
 public class UsuarioAction implements IAction {
 
@@ -18,7 +19,8 @@ public class UsuarioAction implements IAction {
             case "FIND_ALL":
                 pagDestino = findAll(request, response);
                 break;
-            case "ADD":
+            case "REGISTER":
+                pagDestino = register(request, response);
                 break;
             case "LOGIN":
                 pagDestino = login(request, response);
@@ -30,7 +32,7 @@ public class UsuarioAction implements IAction {
     private String findAll(HttpServletRequest request, HttpServletResponse response) {
 
         UserDAO usuarioDAO = new UserDAO();
-        ArrayList<Usuario> lstUsuarios = usuarioDAO.findAll(null);
+        ArrayList<User> lstUsuarios = usuarioDAO.findAll(null);
 
         request.setAttribute("LISTA_USUARIOS", lstUsuarios);
 
@@ -39,24 +41,19 @@ public class UsuarioAction implements IAction {
 
     private String login(HttpServletRequest request,
             HttpServletResponse response) {
-        String email = request.getParameter("EMAIL");
-        String pass = request.getParameter("PASS");
 
-        Usuario usuario = new Usuario();
-        usuario.setEmail(email);
-        usuario.setPassword(pass);
         UserDAO usuarioDAO = new UserDAO();
-        ArrayList<Usuario> loginUsuario = usuarioDAO.
-                findAll(usuario);
-        if (loginUsuario.size() > 0) {
-            request.setAttribute("USUARIO", loginUsuario.get(0));
-            request.setAttribute("MENSAJE_USUARIO", "Login Correcto");
-        } else {
-            request.setAttribute("USUARIO", null);
-            request.setAttribute("MENSAJE_USUARIO", "Login Incorrecto");
+        Mensaje mensaje = usuarioDAO.login(request.getParameter("EMAIL"),request.getParameter("PASS"));
+        
+        return Mensaje.toArrayJson(mensaje);
+    }
+       private String register(HttpServletRequest request,
+            HttpServletResponse response) {
 
-        }
-        return "/index.jsp";
+        UserDAO usuarioDAO = new UserDAO();
+        Mensaje mensaje = usuarioDAO.register(request.getParameter("USERNAME"),request.getParameter("EMAILR"),request.getParameter("PASSR"));
+        
+        return Mensaje.toArrayJson(mensaje);
     }
 
 }
