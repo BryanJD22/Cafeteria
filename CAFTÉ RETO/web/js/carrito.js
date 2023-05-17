@@ -1,240 +1,94 @@
-const ITEMS = [
-    //Aqui hay que pasar la url de base de datos
-    {
-        id: 1,
-        name: "American Coffee",
-        description: "Black coffee with hot water",
-        category: "Coffee",
-        price: 0.25,
-        image: "img/carrusel/imagenCafe1.png",
-        available: 1
-    },
-    {
-        id: 2,
-        name: "Espresso",
-        description: "Strong and concentrated black coffee",
-        category: "Coffee",
-        price: 0.35,
-        image: "img/carrusel/imagenCafe2.png",
-        available: 1
-    },
-    {
-        id: 3,
-        name: "Latte",
-        description: "Coffee with hot milk and foam",
-        category: "Coffee",
-        price: 0.45,
-        image: "img/carrusel/imagenCafe3.png",
-        available: 1
-    },
-    {
-        id: 4,
-        name: "Mocha",
-        description: "Coffee with milk, chocolate, and cream",
-        category: "Coffee",
-        price: 0.55,
-        image: "img/carrusel/imagenCafe4.png",
-        available: 1
-    },
-    {
-        id: 5,
-        name: "Cappuccino",
-        description: "Coffee with hot milk and foam",
-        category: "Coffee",
-        price: 0.45,
-        image: "img/carrusel/imagenCafe5.png",
-        available: 1
-    },
-    {
-        id: 6,
-        name: "Frappé",
-        description: "Coffee with ice, milk, and sugar",
-        category: "Coffee",
-        price: 0.4,
-        image: "img/carrusel/imagenCafe6.png",
-        available: 1
-    },
-    {
-        id: 7,
-        name: "Iced Coffee",
-        description: "Coffee with ice and milk",
-        category: "Coffee",
-        price: 0.35,
-        image: "img/carrusel/imagenCafe7.png",
-        available: 1
-    },
-    {
-        id: 8,
-        name: "Café au Lait",
-        description: "Coffee with hot milk",
-        category: "Coffee",
-        price: 0.3,
-        image: "img/carrusel/imagenCafe8.png",
-        available: 1
-    },
-    {
-        id: 9,
-        name: "Viennese Coffee",
-        description: "Coffee with cream and chocolate",
-        category: "Coffee",
-        price: 0.6,
-        image: "img/carrusel/imagenCafe9.png",
-        available: 1
-    },
-    {
-        id: 10,
-        name: "Irish Coffee",
-        description: "Coffee with whiskey and cream",
-        category: "Coffee",
-        price: 0.7,
-        image: "img/carrusel/imagenCafe10.png",
-        available: 1
-    },
-    {
-        id: 11,
-        name: "Green Tea",
-        description: "Delicate and refreshing tea made from unoxidized leaves",
-        category: "Tea",
-        price: 0.25,
-        image: "img/carrusel/imagenTe1.jpg",
-        available: 1
-    },
-    {
-        id: 12,
-        name: "Earl Grey",
-        description: "Black tea flavored with bergamot oil, known for its citrusy aroma",
-        category: "Tea",
-        price: 0.35,
-        image: "img/carrusel/imagenTe2.jpg",
-        available: 1
-    },
-    {
-        i: 13,
-        name: "Chamomile",
-        description: "Herbal tea made from dried chamomile flowers, known for its calming properties",
-        category: "Tea",
-        price: 0.45,
-        image: "img/carrusel/imagenTe3.jpg",
-        available: 1
-    },
-    {
-        id: 14,
-        name: "Oolong",
-        description: "Partially oxidized tea with a rich and complex flavor profile",
-        category: "Tea",
-        price: 0.55,
-        image: "img/carrusel/imagenTe4.jpg",
-        available: 1
-    },
-    {
-        id: 15,
-        name: "Peppermint",
-        description: "Herbal tea with a minty and refreshing taste",
-        category: "Tea",
-        price: 0.45,
-        image: "img/carrusel/imagenTe5.jpg",
-        available: 1
-    },
-    {
-        "id": 16,
-        name: "Rooibos",
-        description: "Caffeine-free herbal tea from South Africa, known for its sweet and nutty flavor",
-        category: "Tea",
-        price: 0.4,
-        image: "img/carrusel/imagenTe6.jpg",
-        available: 1
-    },
-    {
-        id: 17,
-        name: "Hibiscus",
-        description: "Herbal tea made from the dried petals of hibiscus flowers, known for its tart and fruity taste",
-        category: "Tea",
-        price: 0.35,
-        image: "img/carrusel/imagenTe7.jpg",
-        available: 1
-    },
-    {
-        id: 18,
-        name: "Matcha",
-        description: "Vibrant green tea powder made from finely ground tea leaves, traditionally used in Japanese tea ceremonies",
-        category: "Tea",
-        price: 0.3,
-        image: "img/carrusel/imagenTe8.jpg",
-        available: 1
-    },
-    {
-        id: 19,
-        name: "White Tea",
-        description: "Subtle and delicate tea made from young tea leaves and buds",
-        category: "Tea",
-        price: 0.6,
-        image: "img/carrusel/imagenTe9.jpg",
-        available: 1
-    },
-    {
-        id: 20,
-        name: "Masala Chai",
-        description: "Spiced tea blend with a combination of black tea, milk, and aromatic spices like cinnamon, cardamom, and ginger",
-        category: "Tea",
-        price: 0.7,
-        image: "img/carrusel/imagenTe10.jpg",
-        available: 1
-    }
-]
-const allFilter = document.getElementById('filter3')
-const coffeFilter = document.getElementById('filter1')
-const teaFilter = document.getElementById('filter2')
-const openBtn = document.getElementById('open_cart_btn')
-const cart = document.getElementById('sidecart')
-const closeBtn = document.getElementById('close_btn')
-const backdrop = document.querySelector('.backdrop')
-const itemsEl = document.querySelector('.items')
-const cartItems = document.querySelector('.cart_items')
-const itemsNum = document.getElementById('items_num')
-const subtotalPrice = document.getElementById('subtotal_price')
+async function obtenerResultados(url) {
+    const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+    const resultados = await response.json();
+    console.log(resultados)
+    resultados.forEach((item, idx) => {
+        const itemEl = document.createElement('div');
+        itemEl.classList.add('item');
+        itemEl.id = `item-${item.id}`;
+        itemEl.onclick = () => addItem(idx, item.id);
+        itemEl.innerHTML = `<img src="${item.imagen}" alt="" class="item-img"/>
+        <div class="overview">
+            <h3>${item.nombre}</h3>
+            <br>
+            <p>${item.descripcion}</p>
+            <br>
+            <h4>${item.precio}</h4>
+        </div>
+        <p id="addproduct-${item.id}" class="addproduct">¡Producto añadido!</p>
+        <button id="addtocartproduct-${item.id}" class="addtocartproduct">Add to Cart</button>`;
+        itemsEl.appendChild(itemEl);
+    });
+    return resultados;
+}
 
+let ITEMS = [];
 
-let cart_data = [] //Creo que aqui hay que añadir la url de base de datos
+async function fetchItems() {
+    ITEMS = await obtenerResultados("Controller?ACTION=PRODUCTO.FIND_ALL");
+   
+}
+fetchItems();
 
+const coffeFilter = document.getElementById('filter-coffee')
+const teaFilter = document.getElementById('filter-tea')
+const allFilter = document.getElementById('filter-all')
+const priceFilter = document.getElementById('filter-price')
+const priceFilter2 = document.getElementById('filter-price2')
+const openBtn = document.getElementById('open_cart_btn');
+const cart = document.getElementById('sidecart');
+const closeBtn = document.getElementById('close_btn');
+const backdrop = document.querySelector('.backdrop');
+const itemsEl = document.querySelector('.items');
+const cartItems = document.querySelector('.cart_items');
+const itemsNum = document.getElementById('items_num');
+const subtotalPrice = document.getElementById('subtotal_price');
+
+let cart_data = [];
+if (localStorage.getItem("cart_data")) {
+  cart_data = JSON.parse(localStorage.getItem("cart_data"));
+  updateCart();
+}
+
+window.addEventListener("beforeunload", function() {
+  saveCartData();
+});
 //Abrir y cerrar carrito
-openBtn.addEventListener('click', openCart)
-closeBtn.addEventListener('click', closeCart)
-
+openBtn.addEventListener('click', openCart);
+closeBtn.addEventListener('click', closeCart);
 
 // Filtros
-coffeFilter.addEventListener('click',renderCoffeeItems)
-teaFilter.addEventListener('click',renderTeaItems)
-allFilter.addEventListener('click',renderItems)
+coffeFilter.addEventListener('click', renderCoffeeItems)
+teaFilter.addEventListener('click', renderTeaItems)
+allFilter.addEventListener('click', renderItems)
+priceFilter.addEventListener('click',renderByPriceHigherItems)
+priceFilter2.addEventListener('click',renderByPriceLowerItems)
 
-
-
-
-
-renderItems()
-renderCartItems()
+renderCartItems();
 
 function openCart() {
-    cart.classList.add('open')
-    backdrop.style.display = 'block'
+    cart.classList.add('open');
+    backdrop.style.display = 'block';
     setTimeout(() => {
-        backdrop.classList.add('show')
-    }, 0)
-
+        backdrop.classList.add('show');
+    }, 0);
 }
 
 function closeCart() {
-    cart.classList.remove('open')
-    backdrop.classList.remove('show')
+    cart.classList.remove('open');
+    backdrop.classList.remove('show');
     setTimeout(() => {
-        backdrop.style.display = 'none'
-
-    }, 500)
-
+        backdrop.style.display = 'none';
+    }, 500);
 }
-//////////////////////////////////////////////////////////////
-
 
 function renderItems() {
+    itemsEl.innerHTML = ''
     ITEMS.forEach((item/*Este es el item de la base de datos con su id, nombre etc*/, idx) => {
         const itemEl = document.createElement('div');//no tiene s, no es items es item
         itemEl.classList.add('item');
@@ -243,8 +97,11 @@ function renderItems() {
         itemEl.innerHTML = `
             <img src="${item.imagen}" alt="" class="item-img"/>
             <div class="overview">
-                <h3>${item.nombre}</h3>
-                <p>${item.descripcion}</p>
+            <h2>${item.nombre}</h2>
+            <br>
+            <p>${item.descripcion}</p>
+            <br>
+            <h3>${item.precio}$</h3>
             </div>
             <p id="addproduct-${item.id}" class="addproduct">¡Producto añadido!</p>
             <button id="addtocartproduct-${item.id}" class="addtocartproduct">Add to Cart</button>
@@ -255,15 +112,15 @@ function renderItems() {
 
         addtocartproduct.addEventListener('click', function () {
             itemEl.classList.add('itemactive');
-
         });
     });
 }
+
 function renderCartItems() {
-    cartItems.innerHTML = ''
+    cartItems.innerHTML = '';
     cart_data.forEach(item => {
-        const cartItem = document.createElement('div')
-        cartItem.classList.add('cart_item')
+        const cartItem = document.createElement('div');
+        cartItem.classList.add('cart_item');
         cartItem.innerHTML = `<div class="remove_item" onclick="removeCartItem(${item.id})">
         <span>&times;</span>
     </div>
@@ -274,21 +131,142 @@ function renderCartItems() {
         <p>${item.nombre}</p>
         <strong>${item.precio}$</strong>
         <div class="qty">
-            <span onclick="decreaseQty(${item.id})">-</span>
+            <span onclick="decreaseQty(${item.id}">-</span>
             <strong>${item.qty}</strong>
             <span onclick="increaseQty(${item.id})">+</span>
         </div>
-    </div>`
-        cartItems.appendChild(cartItem)
-    })
+    </div>`;
+        cartItems.appendChild(cartItem);
+    });
+}
+///Filtros
+
+function renderCoffeeItems() {
+  itemsEl.innerHTML = '';
+  ITEMS.forEach((item, idx) => {
+    if (item.tipo === 'Coffee') {
+      const itemEl = document.createElement('div');
+      itemEl.classList.add('item');
+      itemEl.id = `item-${item.id}`;
+      itemEl.onclick = () => addItem(idx, item.id);
+      itemEl.innerHTML = `
+        <img src="${item.imagen}" alt="" class="item-img"/>
+        <div class="overview">
+          <h2>${item.nombre}</h2>
+          <br>
+          <p>${item.descripcion}</p>
+          <br>
+          <h3>${item.precio}$</h3>
+        </div>
+        <p id="addproduct-${item.id}" class="addproduct">¡Producto añadido!</p>
+        <button id="addtocartproduct-${item.id}" class="addtocartproduct">Add to Cart</button>
+      `;
+      itemsEl.appendChild(itemEl);
+
+      const addtocartproduct = document.getElementById(`addtocartproduct-${item.id}`);
+      addtocartproduct.addEventListener('click', function () {
+        itemEl.classList.add('itemactive');
+      });
+    }
+  });
 }
 
+function renderTeaItems() {
+  itemsEl.innerHTML = '';
+  ITEMS.forEach((item, idx) => {
+    if (item.tipo === 'Tea') {
+      const itemEl = document.createElement('div');
+      itemEl.classList.add('item');
+      itemEl.id = `item-${item.id}`;
+      itemEl.onclick = () => addItem(idx, item.id);
+      itemEl.innerHTML = `
+        <img src="${item.imagen}" alt="" class="item-img"/>
+        <div class="overview">
+          <h2>${item.nombre}</h2>
+          <br>
+          <p>${item.descripcion}</p>
+          <br>
+          <h3>${item.precio}$</h3>
+        </div>
+        <p id="addproduct-${item.id}" class="addproduct">¡Producto añadido!</p>
+        <button id="addtocartproduct-${item.id}" class="addtocartproduct">Add to Cart</button>
+      `;
+      itemsEl.appendChild(itemEl);
+
+      const addtocartproduct = document.getElementById(`addtocartproduct-${item.id}`);
+      addtocartproduct.addEventListener('click', function () {
+        itemEl.classList.add('itemactive');
+      });
+    }
+  });
+}
+
+function renderByPriceHigherItems() {
+  itemsEl.innerHTML = '';
+  ITEMS.sort((a, b) => b.precio - a.precio).forEach((item, idx) => {
+    const itemEl = document.createElement('div');
+    itemEl.classList.add('item');
+    itemEl.id = `item-${item.id}`;
+    itemEl.onclick = () => addItem(idx, item.id);
+    itemEl.innerHTML = `
+      <img src="${item.imagen}" alt="" class="item-img"/>
+      <div class="overview">
+        <h2>${item.nombre}</h2>
+        <br>
+        <p>${item.descripcion}</p>
+        <br>
+        <h3>${item.precio}$</h3>
+      </div>
+      <p id="addproduct-${item.id}" class="addproduct">¡Producto añadido!</p>
+      <button id="addtocartproduct-${item.id}" class="addtocartproduct">Add to Cart</button>
+    `;
+    itemsEl.appendChild(itemEl);
+
+    const addtocartproduct = document.getElementById(`addtocartproduct-${item.id
+    
+        }`);
+    addtocartproduct.addEventListener('click', function () {
+      itemEl.classList.add('itemactive');
+    });
+  });
+  ITEMS.sort((a, b) => a.id - b.id);
+}
+
+function renderByPriceLowerItems() {
+  itemsEl.innerHTML = '';
+  ITEMS.sort((a, b) => a.precio - b.precio).forEach((item, idx) => {
+    const itemEl = document.createElement('div');
+    itemEl.classList.add('item');
+    itemEl.id = `item-${item.id}`;
+    itemEl.onclick = () => addItem(idx, item.id);
+    itemEl.innerHTML = `
+      <img src="${item.imagen}" alt="" class="item-img"/>
+      <div class="overview">
+        <h2>${item.nombre}</h2>
+        <br>
+        <p>${item.descripcion}</p>
+        <br>
+        <h3>${item.precio}$</h3>
+      </div>
+      <p id="addproduct-${item.id}" class="addproduct">¡Producto añadido!</p>
+      <button id="addtocartproduct-${item.id}" class="addtocartproduct">Add to Cart</button>
+    `;
+    itemsEl.appendChild(itemEl);
+
+    const addtocartproduct = document.getElementById(`addtocartproduct-${item.id}`);
+    addtocartproduct.addEventListener('click', function () {
+      itemEl.classList.add('itemactive');
+    });
+  });
+  ITEMS.sort((a, b) => a.id - b.id);
+}
+////////////////////
 function addItem(idx, itemId) {
     const foundedItem = cart_data.find(item => item.id.toString() === itemId.toString())
     if (foundedItem) {
         increaseQty(itemId)
     } else {
-        cart_data.push({...ITEMS[idx], available: 1})
+        cart_data.push({...ITEMS[idx], qty: 1})
     }
     updateCart()
 }
@@ -299,6 +277,7 @@ function updateCart() {
     renderCartItems()
     calcItemsNum()
     calcSubtotalPrice()
+        saveCartData(); // Guardar los datos del carrito en el localStorage
 }
 
 function removeCartItem(itemId) {
@@ -308,21 +287,13 @@ function removeCartItem(itemId) {
 
 function increaseQty(itemId) {
     cart_data = cart_data.map(item => item.id.toString() === itemId.
-<<<<<<< HEAD
         toString() ? { ...item, qty: item.qty + 1 } : item)
-=======
-        toString() ? { ...item, available: item.available + 1 } : item)
->>>>>>> 965da631da83df90a1246114625a5d22576fcc35
     updateCart()
 }
 
 function decreaseQty(itemId) {
     cart_data = cart_data.map(item => item.id.toString() === itemId.
-<<<<<<< HEAD
-        toString() ? { ...item, qty: item.qty > 1 ? item.qty - 1 : item.available } : item)
-=======
-        toString() ? { ...item, available: item.available > 1 ? item.available - 1 : item.available } : item)
->>>>>>> 965da631da83df90a1246114625a5d22576fcc35
+        toString() ? { ...item, qty: item.qty > 1 ? item.qty - 1 : item.qty } : item)
     updateCart()
 }
 
@@ -336,66 +307,14 @@ function calcItemsNum() {
 //Calcular el precio de productos añadidos
 function calcSubtotalPrice() {
     let subtotal = 0
-    cart_data.forEach(item => (subtotal += item.price * item.qty))
+    cart_data.forEach(item => (subtotal += item.precio * item.qty))
     subtotalPrice.innerText = subtotal
 }
 
 
+////Guardar el carrito
 
-function renderCoffeeItems() {
-
-    ITEMS.forEach((item/*Este es el item de la base de datos con su id, nombre etc*/, idx) => {
-        if (item.category == 'Coffee') {
-            const itemEl = document.createElement('div');//no tiene s, no es items es item
-            itemEl.classList.add('item');
-            itemEl.id = `item-${item.id}`;
-            itemEl.onclick = () => addItem(idx, item.id);
-            itemEl.innerHTML = `
-            <img src="${item.image}" alt="" class="item-img"/>
-            <div class="overview">
-                <h3>${item.name}</h3>
-                <p>${item.description}</p>
-            </div>
-            <p id="addproduct-${item.id}" class="addproduct">¡Producto añadido!</p>
-            <button id="addtocartproduct-${item.id}" class="addtocartproduct">Add to Cart</button>
-        `;
-            itemsEl.appendChild(itemEl);
-            //Esto es para el popup de añadir el carrito 
-            const addtocartproduct = document.getElementById(`addtocartproduct-${item.id}`);
-
-            addtocartproduct.addEventListener('click', function () {
-                itemEl.classList.add('itemactive');
-            });
-        }
-
-    });
+function saveCartData() {
+    localStorage.setItem('cart_data', JSON.stringify(cart_data));
 }
 
-function renderTeaItems() {
-
-    ITEMS.forEach((item/*Este es el item de la base de datos con su id, nombre etc*/, idx) => {
-        if (item.category == 'Tea') {
-            const itemEl = document.createElement('div');//no tiene s, no es items es item
-            itemEl.classList.add('item');
-            itemEl.id = `item-${item.id}`;
-            itemEl.onclick = () => addItem(idx, item.id);
-            itemEl.innerHTML = `
-            <img src="${item.image}" alt="" class="item-img"/>
-            <div class="overview">
-                <h3>${item.name}</h3>
-                <p>${item.description}</p>
-            </div>
-            <p id="addproduct-${item.id}" class="addproduct">¡Producto añadido!</p>
-            <button id="addtocartproduct-${item.id}" class="addtocartproduct">Add to Cart</button>
-        `;
-            itemsEl.appendChild(itemEl);
-            //Esto es para el popup de añadir el carrito 
-            const addtocartproduct = document.getElementById(`addtocartproduct-${item.id}`);
-
-            addtocartproduct.addEventListener('click', function () {
-                itemEl.classList.add('itemactive');
-            });
-        }
-
-    });
-}

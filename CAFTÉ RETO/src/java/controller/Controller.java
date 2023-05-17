@@ -24,9 +24,11 @@ public class Controller extends HttpServlet {
                 out.print(new UsuarioAction().
                         execute(request, response));
                 break;
-            case "PELICULA":
-                out.print(new PeliculaAction().
-                        execute(request, response));
+                case "PRODUCTO":
+                String resp = new ProductoAction().execute(request, response);
+                System.out.println(resp);
+                out.print(resp);
+                
                 break;
         }
     }
